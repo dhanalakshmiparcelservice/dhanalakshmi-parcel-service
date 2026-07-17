@@ -3,15 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dhanalakshmi Logistics - DPS Parcel Service</title>
-    <!-- FontAwesome for Premium Icons -->
+    <title>Dhanalakshmi Transport - Premium Logistics UI</title>
+    <!-- CSS Icons & Fonts -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         :root {
-            --primary-blue: #002244; /* ஸ்கிரீன்ஷாட்டில் உள்ள தடிமனான பிரீமியம் ப்ளூ */
-            --accent-gold: #ff9900; /* பிரகாசமான தங்க/மஞ்சள் நிறம் */
-            --bg-light: #f8fafc;
-            --text-dark: #334155;
+            --primary: #002244;
+            --accent: #ff9900;
+            --light-bg: #f4f6f9;
+            --text-dark: #1e293b;
+            --card-pink: #e91e63;
         }
 
         * {
@@ -23,14 +24,14 @@
         }
 
         body {
-            background-color: var(--bg-light);
+            background-color: var(--light-bg);
             color: var(--text-dark);
-            padding-top: 80px; /* ஹெடர் மறைக்காமல் இருக்க மார்ஜின் */
+            padding-top: 80px;
         }
 
-        /* --- FIXED FIXED HEADER --- */
+        /* --- STYLISH FIXED HEADER --- */
         header {
-            background-color: var(--primary-blue);
+            background-color: var(--primary);
             color: white;
             position: fixed;
             top: 0;
@@ -42,38 +43,31 @@
             justify-content: center;
             flex-direction: column;
             z-index: 1000;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-            border-bottom: 3px solid var(--accent-gold);
-        }
-
-        .header-title {
-            text-align: center;
+            border-bottom: 4px solid var(--accent);
         }
 
         .header-title h1 {
-            font-size: 1.5rem;
-            font-weight: bold;
+            font-size: 1.6rem;
+            font-weight: 800;
             letter-spacing: 1px;
         }
 
         .header-title h1 span {
-            color: var(--accent-gold);
+            color: var(--accent);
         }
 
-        /* Truck Animation Layout */
         .truck-track {
             width: 100%;
-            height: 20px;
+            height: 15px;
             position: relative;
             overflow: hidden;
-            margin-top: 2px;
         }
 
         .animated-truck {
             position: absolute;
-            font-size: 1.1rem;
-            color: var(--accent-gold);
-            animation: drive 10s linear infinite;
+            font-size: 1rem;
+            color: var(--accent);
+            animation: drive 12s linear infinite;
         }
 
         @keyframes drive {
@@ -81,13 +75,13 @@
             100% { left: 110%; }
         }
 
-        /* --- HAMBURGER MENU BUTTON --- */
+        /* --- HAMBURGER BAR --- */
         .menu-btn {
             position: fixed;
             top: 18px;
             left: 15px;
-            background: var(--accent-gold);
-            color: var(--primary-blue);
+            background: var(--accent);
+            color: var(--primary);
             border: none;
             padding: 10px 14px;
             font-size: 1.2rem;
@@ -95,27 +89,23 @@
             border-radius: 6px;
             z-index: 1001;
             box-shadow: 0 4px 8px rgba(0,0,0,0.3);
-            transition: 0.3s;
         }
 
-        /* --- DYNAMIC SLIDE-IN MENU BAR --- */
         .side-menu {
             position: fixed;
             top: 0;
-            left: -280px;
-            width: 280px;
+            left: -300px;
+            width: 300px;
             height: 100%;
-            background: var(--primary-blue);
+            background: var(--primary);
             z-index: 999;
-            transition: 0.4s cubic-bezier(0.1, 0.7, 0.6, 1);
+            transition: 0.4s ease;
             padding-top: 90px;
             box-shadow: 5px 0 25px rgba(0,0,0,0.5);
+            overflow-y: auto;
         }
 
-        .side-menu.active {
-            left: 0;
-        }
-
+        .side-menu.active { left: 0; }
         .side-menu .close-btn {
             position: absolute;
             top: 20px;
@@ -127,144 +117,575 @@
 
         .side-menu a {
             display: block;
-            padding: 16px 25px;
+            padding: 15px 25px;
             color: #e2e8f0;
             text-decoration: none;
-            font-size: 1.1rem;
+            font-size: 1.05rem;
             border-bottom: 1px solid #003366;
-            transition: 0.3s;
         }
 
         .side-menu a:hover {
             background: #003366;
-            color: var(--accent-gold);
+            color: var(--accent);
             padding-left: 35px;
         }
 
-        /* --- MAIN CARDS CONTAINER --- */
+        /* --- CORE CONTENT LAYOUT --- */
         .container {
-            max-width: 600px;
+            max-width: 1000px;
             margin: 20px auto;
             padding: 15px;
         }
 
-        /* Blue Section from Screenshot */
-        .blue-card {
-            background-color: var(--primary-blue);
-            color: white;
-            border-radius: 16px;
-            padding: 30px 20px;
-            text-align: center;
-            box-shadow: 0 6px 20px rgba(0,0,0,0.15);
-            margin-bottom: 30px;
-        }
-
-        .blue-card p {
-            font-size: 1.1rem;
-            line-height: 1.6;
-            margin-bottom: 25px;
-            opacity: 0.95;
-        }
-
-        /* Styled Buttons with Checkmarks */
-        .load-btn {
-            display: block;
-            width: 100%;
-            background: rgba(255, 255, 255, 0.15);
-            color: white;
-            border: 1px solid rgba(255, 255, 255, 0.3);
-            padding: 14px;
-            font-size: 1.05rem;
-            font-weight: 600;
-            border-radius: 8px;
-            margin-bottom: 15px;
-            cursor: pointer;
-            text-align: center;
-            transition: 0.3s;
-        }
-
-        .load-btn:hover {
-            background: var(--accent-gold);
-            color: var(--primary-blue);
-            border-color: var(--accent-gold);
-            transform: translateY(-2px);
-        }
-
-        /* Helping Hands Pink Section */
-        .helping-hands-card {
+        section {
             background: white;
-            border-left: 6px solid #e91e63; /* Pink Border */
+            padding: 30px 20px;
+            margin-bottom: 30px;
             border-radius: 12px;
-            padding: 25px;
             box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            border-top: 4px solid var(--primary);
         }
 
-        .helping-hands-card h2 {
-            color: #d81b60;
+        section h2 {
             font-size: 1.4rem;
-            margin-bottom: 15px;
+            color: var(--primary);
+            margin-bottom: 20px;
             display: flex;
             align-items: center;
             gap: 10px;
+            border-bottom: 2px solid #f1f5f9;
+            padding-bottom: 10px;
         }
 
-        .helping-hands-card p {
+        /* --- LIVE ROUTE SEARCH BAR --- */
+        .search-wrapper {
+            background: #f8fafc;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            border: 1px solid #e2e8f0;
+        }
+
+        .search-box {
+            width: 100%;
+            padding: 12px 40px 12px 15px;
             font-size: 1rem;
-            line-height: 1.6;
-            color: #475569;
+            border: 2px solid #cbd5e1;
+            border-radius: 8px;
+            outline: none;
+        }
+
+        .search-box:focus { border-color: var(--accent); }
+
+        /* --- PROFILE VIEW --- */
+        .profile-card {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 25px;
+        }
+
+        .profile-img img {
+            width: 180px;
+            height: 230px;
+            object-fit: cover;
+            border-radius: 10px;
+            border: 3px solid var(--accent);
+        }
+
+        .profile-info { flex: 1; min-width: 280px; }
+        .profile-info h3 { font-size: 1.4rem; color: var(--primary); }
+        .profile-info .tag { font-weight: bold; color: var(--accent); margin-bottom: 10px; }
+        .contact-links p { margin: 8px 0; font-size: 0.95rem; }
+        
+        .biz-badges span {
+            display: inline-block;
+            background: #f1f5f9;
+            padding: 6px 12px;
+            border-radius: 6px;
+            margin: 5px 5px 0 0;
+            font-size: 0.85rem;
+            font-weight: 600;
+            border-left: 3px solid var(--accent);
+        }
+
+        .bank-details-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+            background: #f8fafc;
+            padding: 15px;
+            border-radius: 8px;
+        }
+
+        .qr-box { text-align: center; }
+        .qr-box img { width: 110px; background: #ddd; padding: 5px; }
+
+        /* --- MANAGEMENT INSIGHTS --- */
+        .mgmt-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 15px;
+        }
+
+        .mgmt-card {
+            background: #f8fafc;
+            padding: 15px;
+            border-radius: 8px;
+            border-left: 4px solid var(--primary);
+        }
+
+        .mgmt-card h4 { color: var(--primary); margin-bottom: 5px; }
+
+        /* --- ROUTE MAPS GRID --- */
+        .map-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+            margin-bottom: 25px;
+        }
+
+        .map-card {
+            background: #00152b;
+            color: white;
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        .map-card i { font-size: 2rem; color: var(--accent); margin-bottom: 10px; }
+
+        /* --- ACCORDION & BADGES --- */
+        .accordion-header {
+            background: var(--primary);
+            color: white;
+            padding: 15px;
+            cursor: pointer;
+            margin-top: 10px;
+            border-radius: 6px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .accordion-content {
+            display: none;
+            background: #f8fafc;
+            padding: 15px;
+            border: 1px solid #e2e8f0;
+            border-radius: 0 0 6px 6px;
+        }
+
+        .badge-flow { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
+        .badge { background: white; border: 1px solid #cbd5e1; padding: 6px 12px; border-radius: 20px; font-size: 0.85rem; }
+        .badge.hub { background: #fff7ed; border-color: var(--accent); font-weight: bold; }
+
+        /* --- FLEET IMAGES VEHICLES GRID --- */
+        .fleet-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+        }
+
+        .fleet-card {
+            background: #f8fafc;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            overflow: hidden;
+            text-align: center;
+        }
+
+        .fleet-img-slot {
+            width: 100%;
+            height: 140px;
+            background: #e2e8f0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        .fleet-img-slot img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .fleet-card h3 { padding: 10px; font-size: 1.1rem; background: var(--primary); color: white; }
+        .fleet-card p { padding: 10px; font-size: 0.85rem; color: #64748b; }
+
+        /* --- MULTILINGUAL TERMS AND CONDITIONS --- */
+        .lang-tabs { display: flex; gap: 10px; margin-bottom: 15px; }
+        .tab-btn {
+            padding: 8px 16px;
+            border: none;
+            background: #e2e8f0;
+            cursor: pointer;
+            border-radius: 4px;
+            font-weight: bold;
+        }
+
+        .tab-btn.active { background: var(--accent); color: var(--primary); }
+        .term-text { display: none; background: #f8fafc; padding: 15px; border-radius: 6px; line-height: 1.6; }
+        .term-text.active { display: block; }
+
+        /* Helping Hands */
+        .pink-card { border-left: 5px solid var(--card-pink); background: #fff5f7; padding: 20px; border-radius: 8px; }
+
+        @media (max-width: 768px) {
+            .profile-card { flex-direction: column; text-align: center; align-items: center; }
         }
     </style>
 </head>
 <body>
 
-    <!-- HAMBURGER BUTTON -->
+    <!-- HAMBURGER ICON -->
     <button class="menu-btn" onclick="toggleMenu()"><i class="fa-solid fa-bars"></i></button>
 
-    <!-- SLIDE MENU BAR -->
+    <!-- NAVIGATION SIDE MENU BOX -->
     <div class="side-menu" id="sideMenu">
         <span class="close-btn" onclick="toggleMenu()"><i class="fa-solid fa-xmark"></i></span>
-        <a href="#management" onclick="toggleMenu()"><i class="fa-solid fa-user-tie"></i> Management</a>
-        <a href="#routes" onclick="toggleMenu()"><i class="fa-solid fa-route"></i> Daily Routes</a>
-        <a href="#loads" onclick="toggleMenu()"><i class="fa-solid fa-truck-ramp-box"></i> Pan-India Loads</a>
+        <a href="#profile" onclick="toggleMenu()"><i class="fa-solid fa-user-tie"></i> Owner Profile</a>
+        <a href="#management" onclick="toggleMenu()"><i class="fa-solid fa-briefcase"></i> Management Insights</a>
+        <a href="#maps" onclick="toggleMenu()"><i class="fa-solid fa-globe"></i> Operations Coverage Maps</a>
+        <a href="#routes" onclick="toggleMenu()"><i class="fa-solid fa-route"></i> Daily Delivery Routes</a>
+        <a href="#fleet" onclick="toggleMenu()"><i class="fa-solid fa-truck-moving"></i> FTL / PTL Fleet Vehicles</a>
+        <a href="#terms" onclick="toggleMenu()"><i class="fa-solid fa-file-contract"></i> Terms & Conditions</a>
         <a href="#helping-hands" onclick="toggleMenu()"><i class="fa-solid fa-hand-holding-heart"></i> Helping Hands</a>
-        <a href="#paynow" onclick="toggleMenu()"><i class="fa-solid fa-credit-card"></i> Pay Now</a>
     </div>
 
-    <!-- PREMIUM HEADER -->
+    <!-- MAIN APP HEADER -->
     <header>
         <div class="header-title">
             <h1>DHANALAKSHMI <span>TRANSPORT</span></h1>
         </div>
         <div class="truck-track">
-            <div class="animated-truck"><i class="fa-solid fa-truck-moving"></i></div>
+            <div class="animated-truck"><i class="fa-solid fa-truck-container"></i></div>
         </div>
     </header>
 
-    <!-- CONTENT BODY -->
     <div class="container">
 
-        <!-- BLUE LOAD BOX -->
-        <div class="blue-card" id="loads">
-            <p>வாடிக்கையாளர் தேவைக்கேற்ப வண்டிகள் வாடகைக்கு தயார் செய்து தரப்படும்.</p>
-            
-            <div class="load-btn">✓ Part Truck Load (PTL)</div>
-            <div class="load-btn">✓ Full Truck Load (FTL)</div>
-            <div class="load-btn">✓ Any Feet Heavy Vehicles</div>
-        </div>
+        <!-- SECTION 1: OWNER DETAILED PROFILE -->
+        <section id="profile">
+            <h2><i class="fa-solid fa-id-card"></i> Owner Profile (உரிமையாளர் விவரம்)</h2>
+            <div class="profile-card">
+                <div class="profile-img">
+                    <img src="1000033637.png" alt="Pavithran S Yuvakrishna">
+                </div>
+                <div class="profile-info">
+                    <h3>Mr. Pavithran என்கின்ற S. Yuvakrishna, B.B.A</h3>
+                    <p class="tag">Managing Director & Founder</p>
+                    <div class="contact-links">
+                        <p><i class="fa-solid fa-phone"></i> +91 XXXXX XXXXX</p>
+                        <p><i class="fa-solid fa-envelope"></i> contact@dhanalakshmitransport.com</p>
+                        <p><i class="fa-solid fa-location-dot"></i> Head Office: Erode Main Road, Erode, Tamil Nadu.</p>
+                    </div>
+                    <div class="biz-badges">
+                        <span><i class="fa-solid fa-check"></i> யுவா என்டர்பிரைசஸ்</span>
+                        <span><i class="fa-solid fa-check"></i> தனலட்சுமி டிராவல்ஸ் அண்ட் பார்ம்ஸ்</span>
+                        <span><i class="fa-solid fa-check"></i> தனலட்சுமி கார்மெண்ட்ஸ்</span>
+                    </div>
+                </div>
+            </div>
 
-        <!-- HELPING HANDS SECTION -->
-        <div class="helping-hands-card" id="helping-hands">
+            <!-- Financial Layout inside profile -->
+            <div class="bank-details-grid">
+                <div>
+                    <h4><i class="fa-solid fa-university"></i> Bank Account Info</h4>
+                    <p style="font-size:0.85rem; margin-top:5px; line-height: 1.5;">
+                        Bank: State Bank of India<br>
+                        A/C: 123456789012<br>
+                        IFSC: SBIN0001234
+                    </p>
+                </div>
+                <div class="qr-box">
+                    <h4><i class="fa-solid fa-qrcode"></i> Scan Quick Pay</h4>
+                    <!-- Put actual UPI Barcode here -->
+                    <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=UPI" alt="UPI Barcode">
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 2: MANAGEMENT VALUE ADDITION -->
+        <section id="management">
+            <h2><i class="fa-solid fa-shield-halved"></i> Management Analysis & Operations</h2>
+            <div class="mgmt-grid">
+                <div class="mgmt-card">
+                    <h4><i class="fa-solid fa-clock-history"></i> Real-time Tracking</h4>
+                    <p style="font-size:0.85rem; color:#64748b;">சரக்குகள் எங்கு பாதுகாப்பாக பயணிக்கிறது என்பதை துல்லியமாக நிர்வாகம் கண்காணிக்கிறது.</p>
+                </div>
+                <div class="mgmt-card">
+                    <h4><i class="fa-solid fa-percent"></i> Cost Optimization</h4>
+                    <p style="font-size:0.85rem; color:#64748b;">PTL & FTL இரண்டு பிரிவுகளிலும் சந்தையில் மிகக் குறைந்த மற்றும் நியாயமான வாடகை கட்டணம்.</p>
+                </div>
+                <div class="mgmt-card">
+                    <h4><i class="fa-solid fa-user-shield"></i> Safe Hub Handling</h4>
+                    <p style="font-size:0.85rem; color:#64748b;">எங்களின் அனைத்து வழித்தட சேமிப்பு கிடங்குகளிலும் டேமேஜ் இல்லாத லோடிங் மற்றும் அன்லோடிங் உறுதிப்பாடு.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 3: MAP OPERATIONS MAP INTERFACES -->
+        <section id="maps">
+            <h2><i class="fa-solid fa-map-marked-alt"></i> Delivery Scope Network Maps</h2>
+            <div class="map-grid">
+                <div class="map-card">
+                    <i class="fa-solid fa-earth-americas"></i>
+                    <h3>World Network</h3>
+                    <p style="font-size:0.8rem; opacity:0.8; margin-top:5px;">Global Logistics Agency Tie-ups & Import-Export Clearances Support</p>
+                </div>
+                <div class="map-card">
+                    <i class="fa-solid fa-map-location"></i>
+                    <h3>Pan-India Network</h3>
+                    <p style="font-size:0.8rem; opacity:0.8; margin-top:5px;">Interstate Long-Haul Outstation Routes & Heavy 32ft Fleet Placement</p>
+                </div>
+                <div class="map-card">
+                    <i class="fa-solid fa-map"></i>
+                    <h3>Tamil Nadu Network</h3>
+                    <p style="font-size:0.8rem; opacity:0.8; margin-top:5px;">Intra-state Hub-and-Spoke Daily Linehaul Connections</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 4: ROUTE ENGINE WITH SMART LIVE FILTER SEARCH -->
+        <section id="routes">
+            <h2><i class="fa-solid fa-magnifying-glass-location"></i> Live Route Finder Engine</h2>
+            <div class="search-wrapper">
+                <p style="font-size:0.9rem; margin-bottom:8px; font-weight: 600;">உங்கள் ஊருக்கு டெலிவரி உள்ளதா என்று தேடிப் பாருங்கள் (Type City Name):</p>
+                <input type="text" class="search-box" id="routeSearch" placeholder="Ex: காங்கேயம், பீளமேடு, சிவகிரி, அவினாசி..." onkeyup="filterRoutes()">
+            </div>
+
+            <!-- Route Parent Accordions List -->
+            <div id="accordionContainer">
+                
+                <!-- Line 1 -->
+                <div class="route-item">
+                    <div class="accordion-header" onclick="toggleAcc(this)">
+                        <span>Erode ➔ Coimbatore Line (வழித்தடங்கள் & உள்ளூர் டெலிவரி ஏரியாக்கள்)</span>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </div>
+                    <div class="accordion-content">
+                        <strong>வழித்தட கடந்து செல்லும் ஊர்கள் (En-route Delivery):</strong>
+                        <div class="badge-flow">
+                            <span class="badge hub">ஈரோடு (Hub)</span>
+                            <span class="badge">பெருந்துரை</span>
+                            <span class="badge">விஜயமங்கலம்</span>
+                            <span class="badge">திருமங்கலம்</span>
+                            <span class="badge">சங்கப்பள்ளி</span>
+                            <span class="badge">அவிநாசி</span>
+                            <span class="badge">கருமத்தம்பட்டி</span>
+                            <span class="badge">சின்னியம்பாளையம்</span>
+                            <span class="badge hub">கோயம்புத்தூர்</span>
+                        </div>
+                        <strong style="display:block; margin-top:15px;">Coimbatore உள்ளூர் டெலிவரி இடங்கள் (Local Area Door Delivery):</strong>
+                        <div class="badge-flow">
+                            <span class="badge">காந்திபுரம்</span><span class="badge">பீளமேடு</span>
+                            <span class="badge">உக்கடம்</span><span class="badge">சிங்காநல்லூர்</span>
+                            <span class="badge">சரவணம்பட்டி</span><span class="badge">துடியலூர்</span>
+                            <span class="badge">ரத்தினபுரி</span><span class="badge">கணபதி</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Line 2 -->
+                <div class="route-item">
+                    <div class="accordion-header" onclick="toggleAcc(this)">
+                        <span>Erode ➔ Dharapuram ➔ Palani Line</span>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </div>
+                    <div class="accordion-content">
+                        <strong>வழியாக செல்லும் மார்க்கம் (Route Options - வெள்ளோடு & பெருந்துரை டச்):</strong>
+                        <div class="badge-flow">
+                            <span class="badge hub">ஈரோடு (Hub)</span>
+                            <span class="badge">பெருந்துரை</span>
+                            <span class="badge">வெள்ளோடு</span>
+                            <span class="badge">சென்னிமலை</span>
+                            <span class="badge">காங்கேயம்</span>
+                            <span class="badge">வெள்ளக்கோவில்</span>
+                            <span class="badge">சிவகிரி</span>
+                            <span class="badge hub">தாராபுரம்</span>
+                            <span class="badge">அலங்கியம்</span>
+                            <span class="badge hub">பழனி</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Line 3 -->
+                <div class="route-item">
+                    <div class="accordion-header" onclick="toggleAcc(this)">
+                        <span>Erode ➔ Namakkal ➔ Trichy Line</span>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </div>
+                    <div class="accordion-content">
+                        <strong>டெய்லி லைன்ஹால் விநியோகம்:</strong>
+                        <div class="badge-flow">
+                            <span class="badge hub">ஈரோடு</span>
+                            <span class="badge">பள்ளிபாளையம்</span>
+                            <span class="badge">திருச்செங்கோடு</span>
+                            <span class="badge hub">நாமக்கல்</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Line 4 -->
+                <div class="route-item">
+                    <div class="accordion-header" onclick="toggleAcc(this)">
+                        <span>Erode ➔ Karur Line</span>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </div>
+                    <div class="accordion-content">
+                        <strong>நேரடி விநியோகம்:</strong>
+                        <div class="badge-flow">
+                            <span class="badge hub">ஈரோடு</span>
+                            <span class="badge">கொடுமுடி</span>
+                            <span class="badge">புகழூர்</span>
+                            <span class="badge hub">கரூர்</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Line 5 -->
+                <div class="route-item">
+                    <div class="accordion-header" onclick="toggleAcc(this)">
+                        <span>Erode ➔ Salem Line</span>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </div>
+                    <div class="accordion-content">
+                        <strong>பைபாஸ் & சிட்டி அன்லோடிங்:</strong>
+                        <div class="badge-flow">
+                            <span class="badge hub">ஈரோடு</span>
+                            <span class="badge">சங்ககிரி</span>
+                            <span class="badge">மகுடஞ்சாவடி</span>
+                            <span class="badge hub">சேலம்</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- SECTION 5: PTL & FTL FLEET WITH REAL VISUAL IMAGES -->
+        <section id="fleet">
+            <h2><i class="fa-solid fa-truck-flatbed"></i> Fleet Availability (FTL / Part Load Vehicles)</h2>
+            <p style="margin-bottom:15px; color:#64748b;">வண்டிகளின் புகைப்படங்களை பார்த்து உங்களின் லோடுக்கு ஏற்ற வாகனத்தை உடனே தேர்வு செய்யலாம்:</p>
+            <div class="fleet-grid">
+                <div class="fleet-card">
+                    <div class="fleet-img-slot">
+                        <img src="https://images.unsplash.com/photo-1516576838933-264ed57b8b4c?auto=format&fit=crop&w=400&q=80" alt="Tata Intra">
+                    </div>
+                    <h3>டாட்டா இன்ட்ரா (Intra)</h3>
+                    <p>சிறிய அளவிலான பார்ட் லோடுகள் (PTL)</p>
+                </div>
+                <div class="fleet-card">
+                    <div class="fleet-img-slot">
+                        <img src="https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?auto=format&fit=crop&w=400&q=80" alt="Ashok Leyland Dost">
+                    </div>
+                    <h3>லேலண்ட் தோஸ்த் / படா தோஸ்த்</h3>
+                    <p>நடுத்தர கமர்ஷியல் லோடுகள்</p>
+                </div>
+                <div class="fleet-card">
+                    <div class="fleet-img-slot">
+                        <img src="https://images.unsplash.com/photo-1592838064575-70ed626d3a44?auto=format&fit=crop&w=400&q=80" alt="Eicher Truck">
+                    </div>
+                    <h3>ஈச்சர் (Eicher Vahans) / லாரி</h3>
+                    <p>கனரக முழு லோடுகள் (FTL Industrial)</p>
+                </div>
+                <div class="fleet-card">
+                    <div class="fleet-img-slot">
+                        <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=400&q=80" alt="32ft Container">
+                    </div>
+                    <h3>32 அடி எக்ஸ்பிரஸ் கன்டெய்னர்</h3>
+                    <p>ஹைடெக் ஹெவி லாஜிஸ்டிக்ஸ் லோடு வசதி</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 6: TERMS AND CONDITIONS (MULTILINGUAL TABS) -->
+        <section id="terms">
+            <h2><i class="fa-solid fa-scale-balanced"></i> Transport Rules & Terms</h2>
+            <div class="lang-tabs">
+                <button class="tab-btn active" onclick="switchLang('tamil')">தமிழ்</button>
+                <button class="tab-btn" onclick="switchLang('english')">English</button>
+                <button class="tab-btn" onclick="switchLang('hindi')">🏆 हिंदी</button>
+            </div>
+
+            <div id="tamil" class="term-text active">
+                <p>1. சரக்கு முன்பதிவு செய்யும் போது சரியான முகவரி மற்றும் போன் நம்பர் வழங்குவது அவசியமாகும்.</p>
+                <p>2. எரிக்கக்கூடிய அல்லது சட்டவிரோதமான பொருட்கள் கொண்டு செல்ல அனுமதி இல்லை.</p>
+                <p>3. இயற்கை சீற்றங்களினால் ஏற்படும் தாமதங்களுக்கு கம்பெனி பொறுப்பாகாது.</p>
+            </div>
+
+            <div id="english" class="term-text">
+                <p>1. Consignment will only be booked with valid addresses and verifiable telephone contacts.</p>
+                <p>2. Hazardous, inflammable, or illegal contraband materials are strictly prohibited.</p>
+                <p>3. Management is not liable for structural transit delays caused due to unforeseen force majeure circumstances.</p>
+            </div>
+
+            <div id="hindi" class="term-text">
+                <p>1. बुकिंग के समय सही पता और वैध मोबाइल नंबर देना अनिवार्य है।</p>
+                <p>2. ज्वलनशील, खतरनाक या अवैध सामग्री का परिवहन सख्त वर्जित है।</p>
+                <p>3. प्राकृतिक आपदाओं या किसी अप्रत्याशित परिस्थिति के कारण होने वाली देरी के लिए प्रबंधन जिम्मेदार नहीं होगा।</p>
+            </div>
+        </section>
+
+        <!-- SECTION 7: HELPING HANDS -->
+        <section id="helping-hands" class="pink-card">
             <h2>🤝 நம்மால் முடிந்த உதவி (Helping Hands / நிதி உதவி)</h2>
-            <p>எங்கள் தனலட்சுமி டிரான்ஸ்போர்ட் நிறுவனத்தின் சார்பில், ஆதரவற்ற குழந்தைகள் மற்றும் ஏழை எளிய மக்களுக்கு எங்களின் லாப பங்கிலிருந்து குறிப்பிட்ட நிதி உதவி தொடர்ந்து வழங்கப்பட்டு வருகிறது.</p>
-        </div>
+            <p>எங்கள் <strong>தனலட்சுமி டிரான்ஸ்போர்ட்</strong> நிறுவனத்தின் வருடாந்திர லாப பங்கிலிருந்து குறிப்பிட்ட நிதி உதவி, ஆதரவற்ற குழந்தைகள் காப்பகத்திற்கும், ஏழை எளிய மக்களின் கல்வி/மருத்துவ தேவைகளுக்கும் தொடர்ச்சியாக வழங்கப்பட்டு வருகிறது.</p>
+        </section>
 
     </div>
 
-    <!-- JAVA SCRIPT -->
+    <!-- SCRIPT FOR FILTERS AND TAB CONTROLS -->
     <script>
         function toggleMenu() {
-            const menu = document.getElementById('sideMenu');
-            menu.classList.toggle('active');
+            document.getElementById('sideMenu').classList.toggle('active');
+        }
+
+        function toggleAcc(header) {
+            header.classList.toggle('active');
+            let content = header.nextElementSibling;
+            content.style.display = (content.style.display === 'block') ? 'none' : 'block';
+            
+            let icon = header.querySelector('i');
+            icon.classList.toggle('fa-chevron-down');
+            icon.classList.toggle('fa-chevron-up');
+        }
+
+        // LIVE ROUTE FILTER SEARCH FUNCTION
+        function filterRoutes() {
+            let input = document.getElementById('routeSearch').value.toLowerCase();
+            let routeItems = document.querySelectorAll('.route-item');
+
+            routeItems.forEach(item => {
+                let badges = item.querySelectorAll('.badge');
+                let found = false;
+
+                badges.forEach(badge => {
+                    if (badge.textContent.toLowerCase().includes(input)) {
+                        found = true;
+                    }
+                });
+
+                if (found || input === "") {
+                    item.style.display = "block";
+                    if(input !== "") {
+                        item.querySelector('.accordion-content').style.display = 'block';
+                    }
+                } else {
+                    item.style.display = "none";
+                }
+            });
+        }
+
+        // MULTILINGUAL TAB SWITCHER
+        function switchLang(langId) {
+            document.querySelectorAll('.term-text').forEach(el => el.classList.remove('active'));
+            document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
+            
+            document.getElementById(langId).classList.add('active');
+            event.target.classList.add('active');
         }
     </script>
 </body>
