@@ -3,57 +3,62 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dhanalakshmi Parcel Service (DPS) | Best Transport in Erode</title>
-    <meta name="description" content="Dhanalakshmi Parcel Service - Erode. Professional Logistics, Parcel Booking, FTL/PTL Transport.">
-    <meta name="keywords" content="Dhanalakshmi Parcel Service, Erode Transport, Parcel Booking Online">
+    <title>Dhanalakshmi Parcel Service | Erode</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         :root { --primary: #002244; --accent: #d4af37; }
-        body { font-family: 'Segoe UI', sans-serif; background: #fdfdfd; margin: 0; }
-        header { background: var(--primary); padding: 15px; text-align: center; border-bottom: 5px solid var(--accent); }
-        .logo-img { width: 250px; }
-        .hero-banner { width: 100%; height: 350px; background: url('truck-banner.png') center/cover; }
+        body { font-family: 'Segoe UI', sans-serif; margin: 0; background: #fdfdfd; }
+        .navbar { background: var(--primary); padding: 15px; display: flex; justify-content: space-around; position: sticky; top: 0; z-index: 1000; }
+        .navbar a { color: white; text-decoration: none; font-weight: bold; font-size: 0.9rem; }
+        header { background: var(--primary); padding: 20px; text-align: center; border-bottom: 5px solid var(--accent); }
+        .logo-img { width: 220px; }
+        .hero-banner { width: 100%; height: 300px; background: url('truck-banner.png') center/cover; }
         .container { max-width: 800px; margin: auto; padding: 20px; }
-        .profile-section { text-align: center; padding: 30px; border: 2px solid var(--accent); border-radius: 20px; background: #fffaf0; box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
-        .owner-photo { width: 180px; height: 180px; border-radius: 50%; border: 5px solid var(--accent); object-fit: cover; }
-        .cta-btn { background: #25d366; color: white; padding: 15px 30px; text-decoration: none; border-radius: 50px; font-weight: bold; display: inline-block; margin: 20px 0; }
-        .card { background: #fff; padding: 20px; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); margin-bottom: 20px; border-left: 6px solid var(--accent); }
-        .footer-info { background: var(--primary); color: white; padding: 40px 20px; text-align: center; }
-        .terms-text { font-size: 0.85rem; color: #cbd5e1; line-height: 1.6; margin-top: 20px; }
+        .profile-card { background: #fffaf0; padding: 25px; border-radius: 15px; border: 2px solid var(--accent); text-align: center; box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
+        .owner-photo { width: 160px; height: 160px; border-radius: 50%; border: 4px solid var(--accent); object-fit: cover; }
+        .btn { background: #25d366; color: white; padding: 12px 25px; text-decoration: none; border-radius: 30px; display: inline-block; font-weight: bold; margin-top: 15px; }
+        .card { background: #fff; padding: 20px; border-radius: 10px; border-left: 5px solid var(--accent); box-shadow: 0 4px 10px rgba(0,0,0,0.1); margin-top: 20px; }
+        footer { background: var(--primary); color: white; text-align: center; padding: 30px; margin-top: 30px; }
     </style>
 </head>
 <body>
 
+    <nav class="navbar">
+        <a href="#">முகப்பு</a>
+        <a href="#services">சேவைகள்</a>
+        <a href="https://wa.me/918110070409">தொடர்புக்கு</a>
+    </nav>
+
     <header>
-        <img src="logo.png" alt="DPS Logo" class="logo-img">
+        <img src="dps-logo.png" alt="DPS Logo" class="logo-img">
     </header>
 
     <div class="hero-banner"></div>
 
     <div class="container">
-        <section class="profile-section">
-            <img src="my-photo.png" alt="Owner" class="owner-photo">
+        <section class="profile-card">
+            <img src="my-photo.png" alt="Yuvakrishna" class="owner-photo">
             <h2>Yuvakrishna, B.B.A</h2>
             <p><strong>Managing Director - Dhanalakshmi Parcel Service</strong></p>
             <p><i class="fa fa-phone"></i> 8110070409 | 8300061569</p>
-            <a href="https://wa.me/918110070409" class="cta-btn"><i class="fab fa-whatsapp"></i> Book Parcel Online Now</a>
+            <a href="https://wa.me/918110070409" class="btn"><i class="fab fa-whatsapp"></i> வாட்ஸ்அப் புக்கிங்</a>
         </section>
 
+        <div id="services" class="card">
+            <h3><i class="fa fa-truck"></i> எங்கள் சேவைகள்</h3>
+            <p>நாங்கள் FTL/PTL (Full/Part Truck Load) பார்சல் சேவைகளை மிகச் சிறப்பாக வழங்குகிறோம்.</p>
+            <p><strong>வாகனங்கள்:</strong> Intra, Dost, Eicher, 32ft Containers.</p>
+        </div>
+
         <div class="card">
-            <h3><i class="fa fa-truck"></i> Our Fleet & Services</h3>
-            <p>We specialize in FTL/PTL (Full/Part Truck Load). Available: Intra, Dost, Eicher, 32ft Containers.</p>
+            <h3><i class="fa fa-map-marked-alt"></i> முகவரி</h3>
+            <p>19-20, Nandhu Building, VCTV Road, Opp Blue Diamond Lodge, Erode 638 003.</p>
         </div>
     </div>
 
-    <div class="footer-info">
-        <h3>Dhanalakshmi Parcel Service (DPS)</h3>
-        <p>19-20, Nandhu Building, VCTV Road, Erode 638 003.</p>
-        <div class="terms-text">
-            <h4>Terms & Conditions</h4>
-            <p>1. Booking subject to availability. 2. Any damage during transit should be reported immediately. 3. DPS is not liable for indirect losses. 4. All disputes subject to Erode jurisdiction.</p>
-        </div>
-        <p style="margin-top:20px;">© 2026 Dhanalakshmi Parcel Service. All Rights Reserved.</p>
-    </div>
+    <footer>
+        <p>© 2026 Dhanalakshmi Parcel Service. அனைத்து உரிமைகளும் பாதுகாக்கப்பட்டவை.</p>
+    </footer>
 
 </body>
 </html>
