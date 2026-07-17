@@ -3,62 +3,66 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dhanalakshmi Parcel Service | Erode</title>
+    <title>Dhanalakshmi Logistics - DPS Parcel Service</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         :root { --primary: #002244; --accent: #d4af37; }
         body { font-family: 'Segoe UI', sans-serif; margin: 0; background: #fdfdfd; }
-        .navbar { background: var(--primary); padding: 15px; display: flex; justify-content: space-around; position: sticky; top: 0; z-index: 1000; }
-        .navbar a { color: white; text-decoration: none; font-weight: bold; font-size: 0.9rem; }
-        header { background: var(--primary); padding: 20px; text-align: center; border-bottom: 5px solid var(--accent); }
+        .navbar { background: var(--primary); padding: 15px; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 1000; }
+        .menu-btn { color: white; font-size: 24px; cursor: pointer; }
+        header { background: var(--primary); padding: 20px; text-align: center; border-bottom: 5px solid var(--accent); position: relative; overflow: hidden; }
         .logo-img { width: 220px; }
-        .hero-banner { width: 100%; height: 300px; background: url('truck-banner.png') center/cover; }
+        .truck-anim { position: absolute; top: 40%; animation: moveTruck 12s linear infinite; font-size: 30px; color: var(--accent); }
+        @keyframes moveTruck { from { left: -20%; } to { left: 110%; } }
         .container { max-width: 800px; margin: auto; padding: 20px; }
-        .profile-card { background: #fffaf0; padding: 25px; border-radius: 15px; border: 2px solid var(--accent); text-align: center; box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
-        .owner-photo { width: 160px; height: 160px; border-radius: 50%; border: 4px solid var(--accent); object-fit: cover; }
-        .btn { background: #25d366; color: white; padding: 12px 25px; text-decoration: none; border-radius: 30px; display: inline-block; font-weight: bold; margin-top: 15px; }
-        .card { background: #fff; padding: 20px; border-radius: 10px; border-left: 5px solid var(--accent); box-shadow: 0 4px 10px rgba(0,0,0,0.1); margin-top: 20px; }
-        footer { background: var(--primary); color: white; text-align: center; padding: 30px; margin-top: 30px; }
+        .card { background: #fff; padding: 20px; border-radius: 15px; margin-bottom: 20px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); border-left: 6px solid var(--accent); }
+        .accordion { cursor: pointer; padding: 15px; background: #f8f9fa; border-radius: 5px; font-weight: bold; margin-bottom: 5px; display: flex; justify-content: space-between; border-bottom: 1px solid #ddd; }
+        .content { display: none; padding: 15px; background: #fffaf0; border-radius: 5px; margin-bottom: 10px; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); gap: 10px; margin-top: 15px; }
+        .v-card { background: #eee; padding: 10px; border-radius: 8px; text-align: center; font-size: 0.85rem; font-weight: bold; }
+        .cta-btn { background: #25d366; color: white; padding: 15px; text-decoration: none; border-radius: 50px; display: block; text-align: center; margin-top: 20px; font-weight: bold; }
     </style>
 </head>
 <body>
 
     <nav class="navbar">
-        <a href="#">முகப்பு</a>
-        <a href="#services">சேவைகள்</a>
-        <a href="https://wa.me/918110070409">தொடர்புக்கு</a>
+        <div class="menu-btn"><i class="fa fa-bars"></i></div>
+        <h2 style="color:white; margin:0; font-size: 1.2rem;">DPS Parcel Service</h2>
     </nav>
 
     <header>
-        <img src="dps-logo.png" alt="DPS Logo" class="logo-img">
+        <div class="truck-anim"><i class="fa fa-truck"></i></div>
+        <img src="dps-logo_2.png" alt="DPS Logo" class="logo-img">
     </header>
 
-    <div class="hero-banner"></div>
-
     <div class="container">
-        <section class="profile-card">
-            <img src="my-photo.png" alt="Yuvakrishna" class="owner-photo">
-            <h2>Yuvakrishna, B.B.A</h2>
-            <p><strong>Managing Director - Dhanalakshmi Parcel Service</strong></p>
-            <p><i class="fa fa-phone"></i> 8110070409 | 8300061569</p>
-            <a href="https://wa.me/918110070409" class="btn"><i class="fab fa-whatsapp"></i> வாட்ஸ்அப் புக்கிங்</a>
-        </section>
-
-        <div id="services" class="card">
-            <h3><i class="fa fa-truck"></i> எங்கள் சேவைகள்</h3>
-            <p>நாங்கள் FTL/PTL (Full/Part Truck Load) பார்சல் சேவைகளை மிகச் சிறப்பாக வழங்குகிறோம்.</p>
-            <p><strong>வாகனங்கள்:</strong> Intra, Dost, Eicher, 32ft Containers.</p>
+        <div class="card">
+            <h3><i class="fa fa-route"></i> தினசரி வழித்தடங்கள்</h3>
+            <div class="accordion" onclick="toggle(this)">Erode ➔ Dharapuram Line ▾</div>
+            <div class="content">வெள்ளோடு, சென்னிமலை, காங்கேயம், வெள்ளக்கோவில், சிவகிரி, தாராபுரம், பழனி.</div>
+            <div class="accordion" onclick="toggle(this)">Erode ➔ Coimbatore Line ▾</div>
+            <div class="content">காந்திபுரம், பீளமேடு, உக்கடம், சிங்காநல்லூர்.</div>
         </div>
 
         <div class="card">
-            <h3><i class="fa fa-map-marked-alt"></i> முகவரி</h3>
-            <p>19-20, Nandhu Building, VCTV Road, Opp Blue Diamond Lodge, Erode 638 003.</p>
+            <h3><i class="fa fa-truck-moving"></i> எங்கள் வாகனங்கள்</h3>
+            <div class="grid">
+                <div class="v-card">Intra</div> <div class="v-card">Dost</div>
+                <div class="v-card">Eicher</div> <div class="v-card">32ft Container</div>
+            </div>
         </div>
+
+        <div class="card">
+            <h3><i class="fa fa-bus"></i> வெளிமாநில பஸ் சர்வீஸ்</h3>
+            <div class="accordion" onclick="toggle(this)">Erode ➔ Kerala ▾</div>
+            <div class="content">பாலக்காடு, திருச்சூர், எர்ணாகுளம், திருவனந்தபுரம்.</div>
+        </div>
+
+        <a href="https://wa.me/918110070409" class="cta-btn"><i class="fab fa-whatsapp"></i> WhatsApp Booking</a>
     </div>
 
-    <footer>
-        <p>© 2026 Dhanalakshmi Parcel Service. அனைத்து உரிமைகளும் பாதுகாக்கப்பட்டவை.</p>
-    </footer>
-
+    <script>
+        function toggle(el) { el.nextElementSibling.style.display = (el.nextElementSibling.style.display === 'block') ? 'none' : 'block'; }
+    </script>
 </body>
 </html>
