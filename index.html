@@ -3,66 +3,104 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dhanalakshmi Logistics - DPS Parcel Service</title>
+    <title>Dhanalakshmi Parcel Service - Erode</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        :root { --primary: #002244; --accent: #d4af37; }
-        body { font-family: 'Segoe UI', sans-serif; margin: 0; background: #fdfdfd; }
-        .navbar { background: var(--primary); padding: 15px; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 1000; }
-        .menu-btn { color: white; font-size: 24px; cursor: pointer; }
-        header { background: var(--primary); padding: 20px; text-align: center; border-bottom: 5px solid var(--accent); position: relative; overflow: hidden; }
-        .logo-img { width: 220px; }
-        .truck-anim { position: absolute; top: 40%; animation: moveTruck 12s linear infinite; font-size: 30px; color: var(--accent); }
-        @keyframes moveTruck { from { left: -20%; } to { left: 110%; } }
-        .container { max-width: 800px; margin: auto; padding: 20px; }
-        .card { background: #fff; padding: 20px; border-radius: 15px; margin-bottom: 20px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); border-left: 6px solid var(--accent); }
-        .accordion { cursor: pointer; padding: 15px; background: #f8f9fa; border-radius: 5px; font-weight: bold; margin-bottom: 5px; display: flex; justify-content: space-between; border-bottom: 1px solid #ddd; }
-        .content { display: none; padding: 15px; background: #fffaf0; border-radius: 5px; margin-bottom: 10px; }
-        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); gap: 10px; margin-top: 15px; }
-        .v-card { background: #eee; padding: 10px; border-radius: 8px; text-align: center; font-size: 0.85rem; font-weight: bold; }
-        .cta-btn { background: #25d366; color: white; padding: 15px; text-decoration: none; border-radius: 50px; display: block; text-align: center; margin-top: 20px; font-weight: bold; }
+        :root { --primary: #002244; --accent: #d4af37; --bg: #fdfdfd; }
+        body { font-family: 'Segoe UI', sans-serif; margin: 0; background: var(--bg); }
+        
+        /* Header & Navbar */
+        .navbar { background: var(--primary); padding: 15px; display: flex; justify-content: space-between; color: white; position: sticky; top: 0; z-index: 1000; }
+        header { background: var(--primary); padding: 30px; text-align: center; border-bottom: 5px solid var(--accent); }
+        .logo-img { width: 200px; border-radius: 10px; }
+
+        /* Search Section */
+        .search-box { padding: 20px; text-align: center; }
+        #searchInput { padding: 10px; width: 80%; border: 2px solid var(--primary); border-radius: 5px; }
+
+        /* Route Cards */
+        .card { background: white; margin: 15px; padding: 20px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); border-left: 5px solid var(--accent); }
+        .area-tag { display: inline-block; background: #e0e0e0; padding: 5px 10px; margin: 5px; border-radius: 15px; font-size: 0.85rem; }
+
+        /* Terms & Charity */
+        .terms-container { padding: 20px; background: #fffaf0; }
+        .tab-btn { padding: 10px; cursor: pointer; background: var(--primary); color: white; border: none; }
+        
+        /* Footer */
+        footer { background: var(--primary); color: white; text-align: center; padding: 20px; }
     </style>
 </head>
 <body>
 
-    <nav class="navbar">
-        <div class="menu-btn"><i class="fa fa-bars"></i></div>
-        <h2 style="color:white; margin:0; font-size: 1.2rem;">DPS Parcel Service</h2>
-    </nav>
+<nav class="navbar">
+    <div><strong>DPS - Dhanalakshmi Parcel Service</strong></div>
+    <div><i class="fa fa-bars"></i></div>
+</nav>
 
-    <header>
-        <div class="truck-anim"><i class="fa fa-truck"></i></div>
-        <img src="dps-logo_2.png" alt="DPS Logo" class="logo-img">
-    </header>
+<header>
+    <img src="dps-logo_2.png" alt="DPS Logo" class="logo-img">
+    <h1 style="color:white;">Fast • Safe • Trusted</h1>
+</header>
 
-    <div class="container">
-        <div class="card">
-            <h3><i class="fa fa-route"></i> தினசரி வழித்தடங்கள்</h3>
-            <div class="accordion" onclick="toggle(this)">Erode ➔ Dharapuram Line ▾</div>
-            <div class="content">வெள்ளோடு, சென்னிமலை, காங்கேயம், வெள்ளக்கோவில், சிவகிரி, தாராபுரம், பழனி.</div>
-            <div class="accordion" onclick="toggle(this)">Erode ➔ Coimbatore Line ▾</div>
-            <div class="content">காந்திபுரம், பீளமேடு, உக்கடம், சிங்காநல்லூர்.</div>
-        </div>
+<!-- Search Option -->
+<div class="search-box">
+    <input type="text" id="searchInput" placeholder="Search Routes (e.g. Kangayam, Coimbatore)..." onkeyup="filterRoutes()">
+</div>
 
-        <div class="card">
-            <h3><i class="fa fa-truck-moving"></i> எங்கள் வாகனங்கள்</h3>
-            <div class="grid">
-                <div class="v-card">Intra</div> <div class="v-card">Dost</div>
-                <div class="v-card">Eicher</div> <div class="v-card">32ft Container</div>
-            </div>
-        </div>
-
-        <div class="card">
-            <h3><i class="fa fa-bus"></i> வெளிமாநில பஸ் சர்வீஸ்</h3>
-            <div class="accordion" onclick="toggle(this)">Erode ➔ Kerala ▾</div>
-            <div class="content">பாலக்காடு, திருச்சூர், எர்ணாகுளம், திருவனந்தபுரம்.</div>
-        </div>
-
-        <a href="https://wa.me/918110070409" class="cta-btn"><i class="fab fa-whatsapp"></i> WhatsApp Booking</a>
+<!-- Routes Section -->
+<div id="routesContainer">
+    <div class="card route-card">
+        <h3>➔ Erode to Coimbatore</h3>
+        <div class="area-tag">Perundurai</div> <div class="area-tag">Vijayamangalam</div>
+        <div class="area-tag">Avinashi</div> <div class="area-tag">Gandhipuram</div>
+        <div class="area-tag">Peelamedu</div> <div class="area-tag">Singanallur</div>
     </div>
+    
+    <div class="card route-card">
+        <h3>➔ Erode to Namakkal</h3>
+        <div class="area-tag">Pallipalayam</div> <div class="area-tag">Tiruchengode</div>
+    </div>
+</div>
 
-    <script>
-        function toggle(el) { el.nextElementSibling.style.display = (el.nextElementSibling.style.display === 'block') ? 'none' : 'block'; }
-    </script>
+<!-- Terms & Conditions (Multi-Language) -->
+<div class="terms-container">
+    <h3>Terms & Conditions</h3>
+    <button class="tab-btn" onclick="showLang('ta')">Tamil</button>
+    <button class="tab-btn" onclick="showLang('en')">English</button>
+    <button class="tab-btn" onclick="showLang('hi')">Hindi</button>
+    <div id="termsContent" style="margin-top:15px; padding:10px; border:1px solid #ccc;">
+        <!-- Content will change based on language -->
+    </div>
+</div>
+
+<!-- Charity Support -->
+<div class="card" style="background:#fff0f0;">
+    <h3><i class="fa fa-heart"></i> Charitable Support</h3>
+    <p>We contribute a portion of our earnings to those in need. Join us in making a difference.</p>
+</div>
+
+<footer>
+    <p>Contact: 8110070409 | 8300061569</p>
+    <p>&copy; 2026 Dhanalakshmi Parcel Service</p>
+</footer>
+
+<script>
+    function filterRoutes() {
+        let input = document.getElementById('searchInput').value.toLowerCase();
+        let cards = document.getElementsByClassName('route-card');
+        for (let i = 0; i < cards.length; i++) {
+            cards[i].style.display = cards[i].innerText.toLowerCase().includes(input) ? "block" : "none";
+        }
+    }
+    function showLang(lang) {
+        const terms = {
+            'ta': "எங்கள் போக்குவரத்து விதிமுறைகள் மற்றும் நிபந்தனைகள்...",
+            'en': "Our transport terms and conditions apply...",
+            'hi': "हमारे परिवहन नियम और शर्तें लागू होती हैं..."
+        };
+        document.getElementById('termsContent').innerText = terms[lang];
+    }
+</script>
+
 </body>
 </html>
