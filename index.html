@@ -7,8 +7,6 @@
 
 <title>Dhanalakshmi Parcel Service | DPS</title>
 
-<meta name="description" content="Dhanalakshmi Parcel Service - Parcel Booking, Full Truck Load, Part Truck Load, Transport & Logistics">
-
 <style>
 
 *{
@@ -23,97 +21,28 @@ background:#f7f8fc;
 color:#222;
 }
 
-
-/* HEADER */
-
 header{
 background:#002b5c;
 color:white;
-padding:15px 20px;
-display:flex;
-justify-content:space-between;
-align-items:center;
-position:sticky;
-top:0;
-z-index:1000;
-}
-
-
-.logo{
+padding:15px;
 display:flex;
 align-items:center;
-gap:12px;
+gap:15px;
 }
 
-
-.logo img{
+header img{
 width:60px;
 height:60px;
 border-radius:50%;
 }
 
-
-.logo h1{
+header h1{
 font-size:20px;
 }
 
 
-.menu{
-font-size:32px;
-cursor:pointer;
-}
-
-
-
-/* SIDE MENU */
-
-.side-menu{
-
-position:fixed;
-right:-320px;
-top:0;
-width:300px;
-height:100vh;
-background:#002b5c;
-padding:30px;
-transition:.4s;
-z-index:2000;
-
-}
-
-
-.side-menu.active{
-right:0;
-}
-
-
-.side-menu h2{
-color:#d4af37;
-margin-bottom:20px;
-}
-
-
-.side-menu a{
-
-display:block;
-color:white;
-text-decoration:none;
-padding:14px 0;
-border-bottom:1px solid #ffffff44;
-
-}
-
-
-
-
-
-/* HOME */
-
-
 .home{
-
-height:80vh;
-
+height:70vh;
 background:
 linear-gradient(#0008,#0008),
 url("images/office-photo.jpg");
@@ -126,170 +55,72 @@ justify-content:center;
 align-items:center;
 text-align:center;
 color:white;
-
 }
-
 
 .home h2{
-
-font-size:45px;
-
+font-size:40px;
 }
-
 
 .home p{
-
 font-size:20px;
 margin-top:15px;
-
 }
 
 
-
-
-/* SECTION */
-
 section{
-
-padding:50px 20px;
-
+padding:40px 20px;
 }
 
 
 .title{
-
 text-align:center;
-font-size:32px;
 color:#002b5c;
-margin-bottom:30px;
-
-}
-
-
-.title:after{
-
-content:"";
-display:block;
-width:70px;
-height:4px;
-background:#d4af37;
-margin:15px auto;
-
-}
-
-
-
-
-/* PROFILE */
-
-
-.profile{
-
-text-align:center;
-
-}
-
-
-.profile img{
-
-width:280px;
-height:280px;
-object-fit:cover;
-border-radius:20px;
-
-}
-
-
-.profile h3{
-
 font-size:30px;
-color:#002b5c;
-margin:20px;
-
+margin-bottom:25px;
 }
-
-
-
-
-/* BUSINESS */
-
-
-.cards{
-
-display:flex;
-flex-wrap:wrap;
-justify-content:center;
-gap:20px;
-
-}
-
 
 
 .card{
-
 background:white;
-width:260px;
 padding:25px;
-text-align:center;
+margin:15px auto;
 border-radius:15px;
-border-top:5px solid #d4af37;
 box-shadow:0 5px 15px #0002;
+max-width:700px;
+text-align:center;
+border-top:5px solid #d4af37;
+}
+
+
+input,select,textarea,button{
+
+width:100%;
+padding:12px;
+margin:8px 0;
+border-radius:8px;
+border:1px solid #ccc;
 
 }
 
 
-.card h3{
-
-color:#002b5c;
-
-}
-
-
-
-/* CONTACT */
-
-
-.contact{
+button{
 
 background:#002b5c;
 color:white;
-text-align:center;
+font-size:18px;
+border:none;
+cursor:pointer;
 
 }
 
 
-.contact a{
-
-display:block;
-color:white;
-margin:10px;
-text-decoration:none;
-
-}
-
-
-
-
-
-@media(max-width:600px){
-
-.home h2{
-
-font-size:30px;
-
-}
-
-.logo h1{
-
-font-size:15px;
-
-}
-
+.about h3{
+color:#002b5c;
+margin-bottom:15px;
 }
 
 
 </style>
-
 
 </head>
 
@@ -297,11 +128,7 @@ font-size:15px;
 <body>
 
 
-
 <header>
-
-
-<div class="logo">
 
 <img src="images/dps-logo.png">
 
@@ -309,688 +136,283 @@ font-size:15px;
 Dhanalakshmi Parcel Service
 </h1>
 
-</div>
-
-
-
-<div class="menu" onclick="openMenu()">
-
-☰
-
-</div>
-
-
 </header>
 
 
 
-
-
-<div class="side-menu" id="menu">
-
-
-<h2>DPS MENU</h2>
-
-
-<a href="#home">Home</a>
-
-<a href="#profile">Profile</a>
-
-<a href="#md">Managing Director</a>
-
-<a href="#business">Business</a>
-
-<a href="#booking">Parcel Booking</a>
-
-<a href="#truck">Truck Load</a>
-
-<a href="#routes">Daily Routes</a>
-
-<a href="#gallery">Gallery</a>
-
-<a href="#payment">Payment</a>
-
-<a href="#contact">Contact</a>
-
-
-</div>
-
-
-
-
-
-
-<section class="home" id="home">
-
+<section class="home">
 
 <div>
-
 
 <h2>
 Dhanalakshmi Parcel Service
 </h2>
 
-
 <p>
 All India & Tamil Nadu Delivery Transport
 </p>
-
 
 <p>
 Fast • Safe • Reliable
 </p>
 
-
 </div>
-
 
 </section>
 
 
 
 
-
-
-<section id="profile">
-
+<section class="about">
 
 <h2 class="title">
-Profile
+About DPS
 </h2>
 
 
-<div class="profile">
-
-
-<img src="images/profile-photo.jpg">
-
+<div class="card">
 
 <h3>
-Yuvakrishna
-</h3>
-
-
-<p>
-Founder & Managing Director
-<br><br>
-Transport & Logistics Service Provider
-</p>
-
-
-</div>
-
-
-</section>
-
-
-
-
-
-
-<section id="md">
-
-
-<h2 class="title">
-Managing Director
-</h2>
-
-
-<div class="profile">
-
-
-<img src="images/md-photo.jpg">
-
-
-<h3>
-Managing Director
-</h3>
-
-
-<p>
 Dhanalakshmi Parcel Service
+</h3>
+
+<p>
+
+Parcel Booking & Transport Service Provider.
+
 <br><br>
-Parcel Booking | Logistics | Transport Solutions
+
+Safe handling, regular route delivery and customer support.
+
+<br><br>
+
+Erode based transport service for Tamil Nadu & All India delivery.
+
 </p>
 
-
 </div>
-
 
 </section>
 
 
-
-
-
-
-<section id="business">
-
-
-<h2 class="title">
-Our Business
-</h2>
-
-
-
-<div class="cards">
-
-
-<div class="card">
-<h3>Yuva Enterprises</h3>
-<p>Business Management</p>
-</div>
-
-
-<div class="card">
-<h3>Banu Enterprises</h3>
-<p>Business Services</p>
-</div>
-
-
-<div class="card">
-<h3>Sri Dhanalakshmi Garments</h3>
-<p>Garments Business</p>
-</div>
-
-
-<div class="card">
-<h3>Dhanalakshmi Farms</h3>
-<p>Agriculture Business</p>
-</div>
-
-
-<div class="card">
-<h3>Dhanalakshmi Travels</h3>
-<p>Travel Services</p>
-</div>
-
-
-<div class="card">
-<h3>Dhanalakshmi Parcel Service</h3>
-<p>Parcel & Logistics</p>
-</div>
-
-
-<div class="card">
-<h3>4 Star Transport</h3>
-<p>Transport Service</p>
-</div>
-
-
-</div>
-
-
-</section>
-
-
-
-
-
-<script>
-
-
-function openMenu(){
-
-document.getElementById("menu")
-.classList.toggle("active");
-
-}
-
-
-</script>
-function sendBooking()
-<!-- ===========================
-DPS VERSION 2 - PART 2
-BOOKING + TRUCK LOAD + ROUTES
-Add before </body>
-=========================== -->
 
 
 <section id="booking">
-
 
 <h2 class="title">
 Online Parcel Booking
 </h2>
 
 
-<div class="card" style="width:90%;max-width:700px;margin:auto;">
+<div class="card">
 
 
-<form>
+<input id="name" placeholder="Customer Name">
 
+<input id="phone" placeholder="Mobile Number">
 
-<input id="name"
-type="text"
-placeholder="Customer Name">
+<input id="from" placeholder="From Location">
 
-
-<input id="company"
-type="text"
-placeholder="Company Name / Owner Name">
-
-
-<input id="phone"
-type="tel"
-placeholder="Mobile Number">
-
-
-<input id="gst"
-type="text"
-placeholder="GST Number (Optional)">
-
-
-<input id="from"
-type="text"
-placeholder="From Location">
-
-
-<input id="to"
-type="text"
-placeholder="To Location">
+<input id="to" placeholder="To Location">
 
 
 <select id="material">
 
 <option>Select Goods Type</option>
-
 <option>Box</option>
-
-<option>Bag</option>
-
 <option>Garments</option>
-
 <option>Machine</option>
-
-<option>Scrap</option>
-
 <option>Industrial Material</option>
 
 </select>
 
 
-
-<input id="weight"
-type="text"
-placeholder="Weight / Ton">
+<input id="weight" placeholder="Weight">
 
 
-<input id="size"
-type="text"
-placeholder="Height x Width x Length">
+<textarea id="address" placeholder="Pickup Address"></textarea>
 
 
-<select id="vehicle">
-
-<option>Select Vehicle Required</option>
-
-<option>Tata Ace</option>
-
-<option>Dost</option>
-
-<option>Eicher</option>
-
-<option>Lorry</option>
-
-<option>Container</option>
-
-</select>
-
-
-<textarea id="address"
-placeholder="Pickup Address"></textarea>
-
-
-
-<button type="button"
-onclick="sendBooking()">
+<button onclick="sendBooking()">
 
 Send WhatsApp Enquiry
 
 </button>
 
 
-
-</form>
-
-
 </div>
 
-
 </section>
-
-
-
-
-
-
-<section id="truck">
+<!-- DAILY ROUTES -->
 
 
 <h2 class="title">
-Full Truck Load
+Daily Service Routes
 </h2>
 
-
-<div class="cards">
-
-
 <div class="card">
 
-<img src="images/tataace.jpg" width="200">
-
-<h3>
-Tata Ace
-</h3>
-
+<h3>Erode → Coimbatore</h3>
 <p>
-Capacity : 1.5 Ton<br>
-Small Goods<br>
-Parcel Delivery
+Perundurai<br>
+Tiruppur<br>
+Coimbatore
 </p>
 
-</div>
+<br>
 
-
-
-
-
-<div class="card">
-
-<img src="images/dost.jpg" width="200">
-
-<h3>
-Ashok Leyland Dost
-</h3>
-
+<h3>Erode → Dharapuram</h3>
 <p>
-Capacity : 2 Ton<br>
-Commercial Goods
-</p>
-
-</div>
-
-
-
-
-
-
-<div class="card">
-
-<img src="images/eicher.jpg" width="200">
-
-<h3>
-Eicher
-</h3>
-
-<p>
-Capacity : 5 - 10 Ton<br>
-Heavy Load Transport
-</p>
-
-</div>
-
-
-
-
-
-
-
-<div class="card">
-
-<img src="images/lorry.jpg" width="200">
-
-<h3>
-Lorry
-</h3>
-
-<p>
-Full Load Transport<br>
-Long Distance Service
-</p>
-
-</div>
-
-
-
-</div>
-
-
-</section>
-
-
-
-
-
-
-
-
-<section id="parttruck">
-
-
-<h2 class="title">
-Part Truck Load
-</h2>
-
-
-<div class="cards">
-
-
-<div class="card">
-
-<h3>
-Shared Load
-</h3>
-
-<p>
-
-Small Quantity Parcel<br>
-Box Items<br>
-Regular Route Delivery
-
-</p>
-
-
-</div>
-
-
-
-<div class="card">
-
-<h3>
-Door Delivery
-</h3>
-
-<p>
-
-Pickup Available<br>
-Safe Delivery<br>
-Customer Support
-
-</p>
-
-
-</div>
-
-
-</div>
-
-
-</section>
-
-
-
-
-
-
-
-
-<section id="routes">
-
-
-<h2 class="title">
-Daily Routes
-</h2>
-
-
-
-<div class="cards">
-
-
-
-<div class="card">
-
-<h3>
-Erode → Dharapuram
-</h3>
-
-<p>
-
-Erode<br>
 Vellode<br>
 Chennimalai<br>
 Kangayam<br>
 Dharapuram
-
 </p>
 
-</div>
+<br>
 
-
-
-
-
-<div class="card">
-
-<h3>
-Erode → Karur
-</h3>
-
-
+<h3>Erode → Karur</h3>
 <p>
-
-Erode<br>
 Sivagiri<br>
 Kodumudi<br>
 Noyyal<br>
 Karur
-
 </p>
 
-</div>
+<br>
 
-
-
-
-
-<div class="card">
-
-<h3>
-Erode → Coimbatore
-</h3>
-
-
+<h3>Erode → Palani</h3>
 <p>
-
-Perundurai<br>
-Tiruppur<br>
-Coimbatore
-
-</p>
-
-</div>
-
-
-
-
-
-
-<div class="card">
-
-<h3>
-Erode → Palani
-</h3>
-
-
-<p>
-
 Kangayam<br>
 Dharapuram<br>
 Palani
-
 </p>
 
-</div>
+<br>
 
-
-
-
-<div class="card">
-
-<h3>
-Erode → Namakkal
-</h3>
-
-
+<h3>Erode → Namakkal</h3>
 <p>
-
 Tiruchengode<br>
 Namakkal
-
 </p>
 
-
 </div>
-
-
-
-</div>
-
-
 
 </section>
 
 
 
+<!-- VEHICLE -->
+
+<section>
+
+<h2 class="title">
+Transport Services
+</h2>
+
+
+<div class="card">
+
+<p>
+🚚 Tata Ace<br><br>
+🚚 Dost<br><br>
+🚚 Lorry Transport<br><br>
+📦 Parcel & Part Load Service
+</p>
+
+</div>
+
+</section>
+
+
+
+
+<!-- GALLERY -->
+
+<section>
+
+<h2 class="title">
+Gallery
+</h2>
+
+<div class="card">
+
+<img src="images/gallery1.jpg" width="250">
+
+<p>
+DPS Transport Service
+</p>
+
+</div>
+
+</section>
+
+
+
+
+<!-- CONTACT -->
+
+<section style="background:#002b5c;color:white;text-align:center;">
+
+
+<h2>
+Contact DPS
+</h2>
+
+<br>
+
+<p>
+📞 8110070409
+</p>
+
+<p>
+📞 8300061569
+</p>
+
+<br>
+
+<p>
+Dhanalakshmi Parcel Service
+</p>
+
+<p>
+Fast • Safe • Reliable
+</p>
+
+
+</section>
 
 
 
 
 <script>
 
-
 function sendBooking(){
 
 
 let msg =
 
-"DPS Parcel Booking Enquiry\n\n"+
+"Dhanalakshmi Parcel Service Booking\n\n"+
 
-"Name : "+document.getElementById("name").value+
-"\nCompany : "+document.getElementById("company").value+
-"\nPhone : "+document.getElementById("phone").value+
-"\nGST : "+document.getElementById("gst").value+
-"\nFrom : "+document.getElementById("from").value+
-"\nTo : "+document.getElementById("to").value+
-"\nMaterial : "+document.getElementById("material").value+
-"\nWeight : "+document.getElementById("weight").value+
-"\nSize : "+document.getElementById("size").value+
-"\nVehicle : "+document.getElementById("vehicle").value+
-"\nAddress : "+document.getElementById("address").value;
-
+"Name : "+name.value+
+"\nMobile : "+phone.value+
+"\nFrom : "+from.value+
+"\nTo : "+to.value+
+"\nGoods : "+material.value+
+"\nWeight : "+weight.value+
+"\nPickup : "+address.value;
 
 
 window.open(
-
 "https://wa.me/918110070409?text="+
 encodeURIComponent(msg)
-
 );
 
 
 }
 
-
 </script>
+
+
 </body>
 </html>
