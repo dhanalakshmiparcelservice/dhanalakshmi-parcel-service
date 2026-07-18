@@ -3,102 +3,85 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dhanalakshmi Parcel Service & Logistics</title>
+    <title>Dhanalakshmi Transport & Logistics | Professional Logistics</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         :root { --primary: #002244; --accent: #ff9900; --bg: #f4f7f6; }
-        body { font-family: 'Segoe UI', sans-serif; background: var(--bg); margin: 0; }
+        body { font-family: 'Segoe UI', sans-serif; margin: 0; background: var(--bg); }
 
-        /* HEADER ANIMATION */
-        header { background: var(--primary); color: white; padding: 20px; text-align: center; border-bottom: 5px solid var(--accent); }
+        /* Header & Animation */
+        header { background: var(--primary); color: white; padding: 20px; text-align: center; border-bottom: 5px solid var(--accent); position: sticky; top: 0; z-index: 1000; }
         .logo { width: 250px; }
-        .truck-anim { width: 100%; height: 20px; background: #00152b; overflow: hidden; position: relative; }
-        .truck { position: absolute; left: -50px; animation: drive 10s linear infinite; color: var(--accent); }
-        @keyframes drive { 0% { left: -10%; } 100% { left: 110%; } }
+        .truck-animation { width: 100%; height: 20px; overflow: hidden; position: relative; }
+        .truck-icon { position: absolute; animation: move 8s linear infinite; color: var(--accent); }
+        @keyframes move { from { left: -50px; } to { left: 100%; } }
 
-        /* MENU BOX */
-        .menu-btn { position: fixed; top: 10px; left: 10px; z-index: 1000; padding: 10px; background: var(--accent); cursor: pointer; }
-        .side-menu { height: 100%; width: 250px; position: fixed; z-index: 1001; top: 0; left: -250px; background: var(--primary); transition: 0.5s; padding-top: 60px; }
-        .side-menu a { padding: 15px; display: block; color: white; text-decoration: none; border-bottom: 1px solid #333; }
+        /* Menu */
+        .menu-btn { position: fixed; top: 20px; left: 20px; background: var(--accent); padding: 10px; border-radius: 5px; cursor: pointer; z-index: 1001; }
+        .side-menu { height: 100%; width: 0; position: fixed; top: 0; left: 0; background: var(--primary); overflow-x: hidden; transition: 0.5s; padding-top: 60px; z-index: 1002; }
+        .side-menu a { display: block; padding: 15px 25px; color: white; text-decoration: none; font-size: 18px; }
+        .side-menu a:hover { background: var(--accent); }
 
-        /* SEARCH BOX */
+        /* Content */
         .container { max-width: 900px; margin: auto; padding: 20px; }
-        .search-area { background: white; padding: 20px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
+        .card { background: white; padding: 20px; border-radius: 10px; margin-bottom: 20px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); border-left: 5px solid var(--primary); }
+        .search-box { width: 100%; padding: 15px; border: 2px solid var(--primary); border-radius: 8px; margin-bottom: 20px; }
+        .fleet-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; }
         
-        /* CARDS & LAYOUT */
-        .card { background: white; padding: 20px; margin: 15px 0; border-radius: 10px; border-left: 5px solid var(--accent); }
-        .lang-tab { display: flex; gap: 10px; margin-bottom: 10px; }
-        .tab-btn { padding: 5px 15px; cursor: pointer; border: 1px solid #ccc; }
+        .footer-terms { padding: 20px; background: #eee; text-align: center; }
     </style>
 </head>
 <body>
 
-<header>
-    <img src="logo_2.png" class="logo" alt="DPS Logo">
-    <div class="truck-anim"><div class="truck"><i class="fa-solid fa-truck-moving"></i></div></div>
-</header>
-
-<div class="menu-btn" onclick="document.getElementById('sideMenu').style.left='0'"><i class="fa-solid fa-bars"></i> Menu</div>
-<div class="side-menu" id="sideMenu">
-    <a href="javascript:void(0)" onclick="this.parentElement.style.left='-250px'"><i class="fa-solid fa-xmark"></i> Close</a>
-    <a href="#profile">Profile & Business</a>
-    <a href="#routes">Daily Routes</a>
-    <a href="#load">Full Truck & Part Load</a>
+<!-- Menu -->
+<div class="menu-btn" onclick="openMenu()"><i class="fa fa-bars"></i></div>
+<div id="sideMenu" class="side-menu">
+    <a href="#" onclick="closeMenu()">Close</a>
+    <a href="#profile">Profile & Business Details</a>
+    <a href="#routes">Daily Delivery Routes</a>
+    <a href="#fleet">Part Load / Full Load</a>
     <a href="#terms">Terms & Conditions</a>
 </div>
 
+<header>
+    <img src="logo_2.png" alt="DPS Logo" class="logo">
+    <div class="truck-animation"><i class="fa fa-truck truck-icon"></i></div>
+</header>
+
 <div class="container">
-    <!-- SEARCH OPTION -->
-    <section class="search-area">
-        <input type="text" placeholder="ஊர் பெயரைத் தேடுங்கள் (எ.கா: Coimbatore)..." style="width:100%; padding:10px;">
+    <input type="text" class="search-box" placeholder="Search Routes (e.g. Coimbatore, Namakkal)...">
+
+    <!-- Profile -->
+    <section id="profile" class="card">
+        <h2><i class="fa fa-user"></i> Owner Profile</h2>
+        <img src="my-photo1_2.png" style="width:150px; border-radius:50%;">
+        <h3>Pavithran (S. Yuvakrishna, B.B.A)</h3>
+        <p>Managing Director - Dhanalakshmi Parcel Service</p>
+        <p>Address: 19-20, Nandhu Building, VCTV Road, Erode.</p>
     </section>
 
-    <!-- 1. PROFILE SECTION -->
-    <div id="profile" class="card">
-        <h2><i class="fa-solid fa-user-tie"></i> Owner Profile</h2>
-        <img src="my-photo1_2.png" style="width:150px; border-radius:50%; border: 3px solid var(--accent);">
-        <h3>Mr. Pavithran (S. Yuvakrishna, B.B.A)</h3>
-        <p>தனலட்சுமி பார்சல் சர்வீஸ் - உரிமையாளர்</p>
-        <p>Office: Nandhu Building, VCTV Road, Erode.</p>
-    </div>
+    <!-- Routes -->
+    <section id="routes" class="card">
+        <h2><i class="fa fa-route"></i> Daily Delivery Routes</h2>
+        <p><strong>Erode to Coimbatore:</strong> Perundurai → Vijayamangalam → Avinashi → Coimbatore Local.</p>
+        <p><strong>Erode to Dharapuram:</strong> Vellode → Kangayam → Dharapuram → Palani.</p>
+        <p><strong>Erode to Namakkal:</strong> Bhavani → Tiruchengode → Namakkal.</p>
+    </section>
 
-    <!-- 2. ROUTES SECTION -->
-    <div id="routes" class="card">
-        <h2><i class="fa-solid fa-route"></i> Daily Delivery Routes</h2>
-        <p><strong>ஈரோடு - கோயம்புத்தூர்:</strong> பெருந்துரை, விஜயமங்கலம், அவிநாசி, கருமத்தம்பட்டி, சின்னியம்பாளையம், பீளமேடு, காந்திபுரம்.</p>
-        <p><strong>ஈரோடு - தாராபுரம் (பழனி வழி):</strong> வெள்ளோடு, காங்கேயம், அலங்கியம், பழனி.</p>
-        <p><strong>ஈரோடு - நாமக்கல்:</strong> பள்ளிபாளையம், திருச்செங்கோடு, நாமக்கல்.</p>
-    </div>
-
-    <!-- 3. VEHICLE / LOAD SECTION -->
-    <div id="load" class="card">
-        <h2><i class="fa-solid fa-truck"></i> Full Truck & Part Load</h2>
-        <p>வாகனங்கள்: Tata Intra, Dost, Eicher, 32ft Container.</p>
-        <div style="display:flex; gap:10px;">
-            <div style="border:1px solid #ddd; padding:10px;">Part Load List</div>
-            <div style="border:1px solid #ddd; padding:10px;">Full Truck Load</div>
+    <!-- Fleet -->
+    <section id="fleet" class="card">
+        <h2><i class="fa fa-truck"></i> Fleet Details</h2>
+        <div class="fleet-grid">
+            <div><i class="fa fa-shuttle-van"></i> Intra / Dost</div>
+            <div><i class="fa fa-truck-moving"></i> Eicher</div>
+            <div><i class="fa fa-truck-monster"></i> 32ft Container</div>
         </div>
-    </div>
-
-    <!-- 4. TERMS -->
-    <div id="terms" class="card">
-        <h2><i class="fa-solid fa-file-contract"></i> Terms & Conditions</h2>
-        <div class="lang-tab">
-            <button class="tab-btn" onclick="showLang('ta')">தமிழ்</button>
-            <button class="tab-btn" onclick="showLang('en')">English</button>
-            <button class="tab-btn" onclick="showLang('hi')">हिन्दी</button>
-        </div>
-        <div id="ta" class="term-text">சரக்கு பாதுகாப்பு நிறுவனத்தின் பொறுப்பு...</div>
-        <div id="en" class="term-text" style="display:none;">Goods safety is our priority...</div>
-        <div id="hi" class="term-text" style="display:none;">माल की सुरक्षा हमारी जिम्मेदारी...</div>
-    </div>
+    </section>
 </div>
 
 <script>
-    function showLang(lang) {
-        document.querySelectorAll('.term-text').forEach(t => t.style.display = 'none');
-        document.getElementById(lang).style.display = 'block';
-    }
+    function openMenu() { document.getElementById("sideMenu").style.width = "250px"; }
+    function closeMenu() { document.getElementById("sideMenu").style.width = "0"; }
 </script>
 </body>
 </html>
