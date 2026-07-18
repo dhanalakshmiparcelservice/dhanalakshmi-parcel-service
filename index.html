@@ -3,102 +3,78 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dhanalakshmi Parcel Service - Erode</title>
+    <title>தனலட்சுமி பார்சல் சர்வீஸ் | ஈரோடு</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        :root { --primary: #002244; --accent: #d4af37; --bg: #fdfdfd; }
-        body { font-family: 'Segoe UI', sans-serif; margin: 0; background: var(--bg); }
-        
-        /* Header & Navbar */
-        .navbar { background: var(--primary); padding: 15px; display: flex; justify-content: space-between; color: white; position: sticky; top: 0; z-index: 1000; }
-        header { background: var(--primary); padding: 30px; text-align: center; border-bottom: 5px solid var(--accent); }
-        .logo-img { width: 200px; border-radius: 10px; }
-
-        /* Search Section */
-        .search-box { padding: 20px; text-align: center; }
-        #searchInput { padding: 10px; width: 80%; border: 2px solid var(--primary); border-radius: 5px; }
-
-        /* Route Cards */
-        .card { background: white; margin: 15px; padding: 20px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); border-left: 5px solid var(--accent); }
-        .area-tag { display: inline-block; background: #e0e0e0; padding: 5px 10px; margin: 5px; border-radius: 15px; font-size: 0.85rem; }
-
-        /* Terms & Charity */
-        .terms-container { padding: 20px; background: #fffaf0; }
-        .tab-btn { padding: 10px; cursor: pointer; background: var(--primary); color: white; border: none; }
-        
-        /* Footer */
-        footer { background: var(--primary); color: white; text-align: center; padding: 20px; }
+        :root { --primary: #003366; --accent: #ff8c00; --bg: #f4f7f6; }
+        body { font-family: 'Segoe UI', sans-serif; margin: 0; background: var(--bg); color: #333; }
+        .header { background: #fff; text-align: center; padding: 20px; border-bottom: 4px solid var(--accent); }
+        .header img { max-width: 250px; }
+        .nav { display: flex; justify-content: center; background: var(--primary); padding: 12px; position: sticky; top: 0; z-index: 1000; }
+        .nav a { color: white; padding: 0 20px; text-decoration: none; font-weight: bold; }
+        .container { max-width: 800px; margin: auto; padding: 20px; }
+        .card { background: white; padding: 20px; margin-bottom: 20px; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
+        .img-fluid { width: 100%; border-radius: 10px; border: 2px solid var(--primary); }
+        .btn-map { background: #4285F4; color: white; padding: 15px; display: block; text-align: center; text-decoration: none; border-radius: 8px; font-weight: bold; margin-top: 10px; }
+        .search-box { width: 100%; padding: 12px; margin: 10px 0; border: 2px solid var(--primary); border-radius: 5px; box-sizing: border-box; }
+        .wa-float { position: fixed; bottom: 20px; right: 20px; background: #25D366; color: white; padding: 15px 20px; border-radius: 50px; font-size: 24px; box-shadow: 0 4px 10px rgba(0,0,0,0.3); z-index: 1000; }
+        footer { text-align: center; padding: 20px; color: #666; background: #fff; }
     </style>
 </head>
 <body>
 
-<nav class="navbar">
-    <div><strong>DPS - Dhanalakshmi Parcel Service</strong></div>
-    <div><i class="fa fa-bars"></i></div>
+<div class="header">
+    <img src="logo_2.png" alt="Dhanalakshmi Parcel Service">
+</div>
+
+<nav class="nav">
+    <a href="#home">Home</a>
+    <a href="#profile">Profile</a>
+    <a href="#search">Search</a>
 </nav>
 
-<header>
-    <img src="dps-logo_2.png" alt="DPS Logo" class="logo-img">
-    <h1 style="color:white;">Fast • Safe • Trusted</h1>
-</header>
-
-<!-- Search Option -->
-<div class="search-box">
-    <input type="text" id="searchInput" placeholder="Search Routes (e.g. Kangayam, Coimbatore)..." onkeyup="filterRoutes()">
-</div>
-
-<!-- Routes Section -->
-<div id="routesContainer">
-    <div class="card route-card">
-        <h3>➔ Erode to Coimbatore</h3>
-        <div class="area-tag">Perundurai</div> <div class="area-tag">Vijayamangalam</div>
-        <div class="area-tag">Avinashi</div> <div class="area-tag">Gandhipuram</div>
-        <div class="area-tag">Peelamedu</div> <div class="area-tag">Singanallur</div>
+<div class="container">
+    <div id="home" class="card">
+        <img src="my-photo1_2.png" alt="Owner" class="img-fluid">
+        <h2 style="color: var(--primary);">வணக்கம், நான் பவித்ரன்</h2>
+        <p><strong>தனலட்சுமி பார்சல் சர்வீஸ் (DPS), ஈரோடு.</strong><br>
+        உங்களின் பொருட்களைப் பாதுகாப்பாகவும், குறித்த நேரத்தில் இலக்குக்குக் கொண்டு சேர்ப்பதே எங்கள் நோக்கம்.</p>
     </div>
-    
-    <div class="card route-card">
-        <h3>➔ Erode to Namakkal</h3>
-        <div class="area-tag">Pallipalayam</div> <div class="area-tag">Tiruchengode</div>
-    </div>
-</div>
 
-<!-- Terms & Conditions (Multi-Language) -->
-<div class="terms-container">
-    <h3>Terms & Conditions</h3>
-    <button class="tab-btn" onclick="showLang('ta')">Tamil</button>
-    <button class="tab-btn" onclick="showLang('en')">English</button>
-    <button class="tab-btn" onclick="showLang('hi')">Hindi</button>
-    <div id="termsContent" style="margin-top:15px; padding:10px; border:1px solid #ccc;">
-        <!-- Content will change based on language -->
+    <div id="search" class="card">
+        <h2>🔍 வழித்தடங்களைத் தேடவும்</h2>
+        <input type="text" id="searchInput" class="search-box" placeholder="உதாரணம்: கோவை, நாமக்கல்..." onkeyup="filterRoutes()">
+        <div id="routesContainer">
+            <div class="route-item">➔ ஈரோடு - கோயம்புத்தூர்</div>
+            <div class="route-item">➔ ஈரோடு - தாராபுரம்</div>
+            <div class="route-item">➔ ஈரோடு - நாமக்கல்</div>
+        </div>
+    </div>
+
+    <div id="profile" class="card">
+        <img src="My profile photo _2.png" alt="Office Work" class="img-fluid">
+        <h2 style="color: var(--primary);">அலுவலக விவரங்கள்</h2>
+        <p><strong>முகவரி:</strong> 19-20, நந்து பில்டிங், வி.சி.டி.வி ரோடு, ப்ளூ டைமண்ட் லாட்ஜ் எதிரில், ஈரோடு - 638 003.</p>
+        <p><strong>தொடர்பு:</strong> 8110070409, 8300061569</p>
+        <a href="https://goo.gl/maps/5ybefjyaCKgCmKyG9" target="_blank" class="btn-map">
+            <i class="fas fa-map-marker-alt"></i> கூகுள் மேப்பில் பார்க்க
+        </a>
     </div>
 </div>
 
-<!-- Charity Support -->
-<div class="card" style="background:#fff0f0;">
-    <h3><i class="fa fa-heart"></i> Charitable Support</h3>
-    <p>We contribute a portion of our earnings to those in need. Join us in making a difference.</p>
-</div>
+<a href="https://wa.me/918110070409" class="wa-float"><i class="fab fa-whatsapp"></i></a>
 
 <footer>
-    <p>Contact: 8110070409 | 8300061569</p>
-    <p>&copy; 2026 Dhanalakshmi Parcel Service</p>
+    <p>&copy; 2026 தனலட்சுமி பார்சல் சர்வீஸ் | ஈரோடு</p>
 </footer>
 
 <script>
     function filterRoutes() {
         let input = document.getElementById('searchInput').value.toLowerCase();
-        let cards = document.getElementsByClassName('route-card');
-        for (let i = 0; i < cards.length; i++) {
-            cards[i].style.display = cards[i].innerText.toLowerCase().includes(input) ? "block" : "none";
+        let items = document.getElementsByClassName('route-item');
+        for (let i = 0; i < items.length; i++) {
+            items[i].style.display = items[i].innerText.toLowerCase().includes(input) ? "block" : "none";
         }
-    }
-    function showLang(lang) {
-        const terms = {
-            'ta': "எங்கள் போக்குவரத்து விதிமுறைகள் மற்றும் நிபந்தனைகள்...",
-            'en': "Our transport terms and conditions apply...",
-            'hi': "हमारे परिवहन नियम और शर्तें लागू होती हैं..."
-        };
-        document.getElementById('termsContent').innerText = terms[lang];
     }
 </script>
 
