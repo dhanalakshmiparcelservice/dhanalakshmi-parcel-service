@@ -539,6 +539,458 @@ document.getElementById("menu")
 
 </script>
 
+<!-- ===========================
+DPS VERSION 2 - PART 2
+BOOKING + TRUCK LOAD + ROUTES
+Add before </body>
+=========================== -->
 
+
+<section id="booking">
+
+
+<h2 class="title">
+Online Parcel Booking
+</h2>
+
+
+<div class="card" style="width:90%;max-width:700px;margin:auto;">
+
+
+<form>
+
+
+<input id="name"
+type="text"
+placeholder="Customer Name">
+
+
+<input id="company"
+type="text"
+placeholder="Company Name / Owner Name">
+
+
+<input id="phone"
+type="tel"
+placeholder="Mobile Number">
+
+
+<input id="gst"
+type="text"
+placeholder="GST Number (Optional)">
+
+
+<input id="from"
+type="text"
+placeholder="From Location">
+
+
+<input id="to"
+type="text"
+placeholder="To Location">
+
+
+<select id="material">
+
+<option>Select Goods Type</option>
+
+<option>Box</option>
+
+<option>Bag</option>
+
+<option>Garments</option>
+
+<option>Machine</option>
+
+<option>Scrap</option>
+
+<option>Industrial Material</option>
+
+</select>
+
+
+
+<input id="weight"
+type="text"
+placeholder="Weight / Ton">
+
+
+<input id="size"
+type="text"
+placeholder="Height x Width x Length">
+
+
+<select id="vehicle">
+
+<option>Select Vehicle Required</option>
+
+<option>Tata Ace</option>
+
+<option>Dost</option>
+
+<option>Eicher</option>
+
+<option>Lorry</option>
+
+<option>Container</option>
+
+</select>
+
+
+<textarea id="address"
+placeholder="Pickup Address"></textarea>
+
+
+
+<button type="button"
+onclick="sendBooking()">
+
+Send WhatsApp Enquiry
+
+</button>
+
+
+
+</form>
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+<section id="truck">
+
+
+<h2 class="title">
+Full Truck Load
+</h2>
+
+
+<div class="cards">
+
+
+<div class="card">
+
+<img src="images/tataace.jpg" width="200">
+
+<h3>
+Tata Ace
+</h3>
+
+<p>
+Capacity : 1.5 Ton<br>
+Small Goods<br>
+Parcel Delivery
+</p>
+
+</div>
+
+
+
+
+
+<div class="card">
+
+<img src="images/dost.jpg" width="200">
+
+<h3>
+Ashok Leyland Dost
+</h3>
+
+<p>
+Capacity : 2 Ton<br>
+Commercial Goods
+</p>
+
+</div>
+
+
+
+
+
+
+<div class="card">
+
+<img src="images/eicher.jpg" width="200">
+
+<h3>
+Eicher
+</h3>
+
+<p>
+Capacity : 5 - 10 Ton<br>
+Heavy Load Transport
+</p>
+
+</div>
+
+
+
+
+
+
+
+<div class="card">
+
+<img src="images/lorry.jpg" width="200">
+
+<h3>
+Lorry
+</h3>
+
+<p>
+Full Load Transport<br>
+Long Distance Service
+</p>
+
+</div>
+
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+
+
+<section id="parttruck">
+
+
+<h2 class="title">
+Part Truck Load
+</h2>
+
+
+<div class="cards">
+
+
+<div class="card">
+
+<h3>
+Shared Load
+</h3>
+
+<p>
+
+Small Quantity Parcel<br>
+Box Items<br>
+Regular Route Delivery
+
+</p>
+
+
+</div>
+
+
+
+<div class="card">
+
+<h3>
+Door Delivery
+</h3>
+
+<p>
+
+Pickup Available<br>
+Safe Delivery<br>
+Customer Support
+
+</p>
+
+
+</div>
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+
+
+<section id="routes">
+
+
+<h2 class="title">
+Daily Routes
+</h2>
+
+
+
+<div class="cards">
+
+
+
+<div class="card">
+
+<h3>
+Erode → Dharapuram
+</h3>
+
+<p>
+
+Erode<br>
+Vellode<br>
+Chennimalai<br>
+Kangayam<br>
+Dharapuram
+
+</p>
+
+</div>
+
+
+
+
+
+<div class="card">
+
+<h3>
+Erode → Karur
+</h3>
+
+
+<p>
+
+Erode<br>
+Sivagiri<br>
+Kodumudi<br>
+Noyyal<br>
+Karur
+
+</p>
+
+</div>
+
+
+
+
+
+<div class="card">
+
+<h3>
+Erode → Coimbatore
+</h3>
+
+
+<p>
+
+Perundurai<br>
+Tiruppur<br>
+Coimbatore
+
+</p>
+
+</div>
+
+
+
+
+
+
+<div class="card">
+
+<h3>
+Erode → Palani
+</h3>
+
+
+<p>
+
+Kangayam<br>
+Dharapuram<br>
+Palani
+
+</p>
+
+</div>
+
+
+
+
+<div class="card">
+
+<h3>
+Erode → Namakkal
+</h3>
+
+
+<p>
+
+Tiruchengode<br>
+Namakkal
+
+</p>
+
+
+</div>
+
+
+
+</div>
+
+
+
+</section>
+
+
+
+
+
+
+
+<script>
+
+
+function sendBooking(){
+
+
+let msg =
+
+"DPS Parcel Booking Enquiry\n\n"+
+
+"Name : "+document.getElementById("name").value+
+"\nCompany : "+document.getElementById("company").value+
+"\nPhone : "+document.getElementById("phone").value+
+"\nGST : "+document.getElementById("gst").value+
+"\nFrom : "+document.getElementById("from").value+
+"\nTo : "+document.getElementById("to").value+
+"\nMaterial : "+document.getElementById("material").value+
+"\nWeight : "+document.getElementById("weight").value+
+"\nSize : "+document.getElementById("size").value+
+"\nVehicle : "+document.getElementById("vehicle").value+
+"\nAddress : "+document.getElementById("address").value;
+
+
+
+window.open(
+
+"https://wa.me/918110070409?text="+
+encodeURIComponent(msg)
+
+);
+
+
+}
+
+
+</script>
 </body>
 </html>
