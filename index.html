@@ -1,145 +1,544 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Dhanalakshmi Parcel Service | DPS</title>
-<meta name="description" content="Dhanalakshmi Parcel Service - All India & Tamil Nadu Delivery Transport, Parcel Booking, Full Truck Load, Part Truck Load">
-<meta name="keywords" content="Dhanalakshmi Parcel Service, DPS, Parcel Service Erode, Transport, Logistics, Truck Load">
-<meta name="author" content="Dhanalakshmi Parcel Service">
+
+<meta name="description" content="Dhanalakshmi Parcel Service - Parcel Booking, Full Truck Load, Part Truck Load, Transport & Logistics">
 
 <style>
-/* CSS Styles */
-*{margin:0; padding:0; box-sizing:border-box; font-family:Arial, sans-serif;}
-body{background:#f8f9fc; color:#222; overflow-x:hidden;}
 
-/* Header */
-header{background:#002b5c; color:white; padding:15px 20px; display:flex; justify-content:space-between; align-items:center; position:sticky; top:0; z-index:100;}
-.logo{display:flex; align-items:center; gap:10px;}
-.logo img{width:55px; height:55px; border-radius:50%; animation:rotateLogo 5s infinite linear;}
-.menu-btn{font-size:30px; cursor:pointer;}
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+}
 
-/* Side Menu */
-.side-menu{position:fixed; top:0; right:-300px; width:280px; height:100%; background:#002b5c; color:white; padding:30px; transition:0.4s; z-index:200; box-shadow:-5px 0 20px #0005;}
-.side-menu.active{right:0;}
-.side-menu h2{color:#d4af37;}
-.side-menu a{display:block; color:white; text-decoration:none; padding:15px 0; border-bottom:1px solid #ffffff55;}
+body{
+background:#f7f8fc;
+color:#222;
+}
 
-/* Sections & Cards */
-section{padding:50px 20px; animation:fadeIn 1s ease;}
-.title{text-align:center; color:#002b5c; font-size:32px; margin-bottom:30px; position:relative; font-weight:bold;}
-.title:after{content:""; display:block; width:70px; height:4px; background:#d4af37; margin:15px auto; border-radius:5px;}
-.cards{display:flex; flex-wrap:wrap; gap:20px; justify-content:center;}
-.card{background:white; width:260px; padding:25px; border-radius:15px; box-shadow:0 5px 15px #0002; text-align:center; transition:.4s; border-top:5px solid #d4af37;}
-.card:hover{transform:translateY(-10px); box-shadow:0 15px 35px rgba(0,0,0,.20);}
 
-/* Forms & Buttons */
-input, textarea, select{width:100%; padding:14px; margin:10px 0; border:1px solid #ddd; border-radius:10px; font-size:16px;}
-textarea{height:120px;}
-button{background:#002b5c; color:white; border:none; padding:14px 25px; border-radius:30px; cursor:pointer; font-size:16px; margin-top:15px; transition:.3s;}
-button:hover{background:#d4af37; color:#000; transform:scale(1.05);}
+/* HEADER */
 
-/* Animations */
-@keyframes fadeIn{from{opacity:0; transform:translateY(30px);} to{opacity:1; transform:translateY(0);}}
-@keyframes rotateLogo{0%{transform:rotate(0deg);} 100%{transform:rotate(360deg);}}
+header{
+background:#002b5c;
+color:white;
+padding:15px 20px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+position:sticky;
+top:0;
+z-index:1000;
+}
 
-.home{min-height:80vh; background:linear-gradient(#0008,#0008), url("images/office-photo.jpg"); background-size:cover; background-position:center; display:flex; justify-content:center; align-items:center; text-align:center; color:white;}
-.profile img{width:250px; height:250px; border-radius:20px; object-fit:cover;}
+
+.logo{
+display:flex;
+align-items:center;
+gap:12px;
+}
+
+
+.logo img{
+width:60px;
+height:60px;
+border-radius:50%;
+}
+
+
+.logo h1{
+font-size:20px;
+}
+
+
+.menu{
+font-size:32px;
+cursor:pointer;
+}
+
+
+
+/* SIDE MENU */
+
+.side-menu{
+
+position:fixed;
+right:-320px;
+top:0;
+width:300px;
+height:100vh;
+background:#002b5c;
+padding:30px;
+transition:.4s;
+z-index:2000;
+
+}
+
+
+.side-menu.active{
+right:0;
+}
+
+
+.side-menu h2{
+color:#d4af37;
+margin-bottom:20px;
+}
+
+
+.side-menu a{
+
+display:block;
+color:white;
+text-decoration:none;
+padding:14px 0;
+border-bottom:1px solid #ffffff44;
+
+}
+
+
+
+
+
+/* HOME */
+
+
+.home{
+
+height:80vh;
+
+background:
+linear-gradient(#0008,#0008),
+url("images/office-photo.jpg");
+
+background-size:cover;
+background-position:center;
+
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+color:white;
+
+}
+
+
+.home h2{
+
+font-size:45px;
+
+}
+
+
+.home p{
+
+font-size:20px;
+margin-top:15px;
+
+}
+
+
+
+
+/* SECTION */
+
+section{
+
+padding:50px 20px;
+
+}
+
+
+.title{
+
+text-align:center;
+font-size:32px;
+color:#002b5c;
+margin-bottom:30px;
+
+}
+
+
+.title:after{
+
+content:"";
+display:block;
+width:70px;
+height:4px;
+background:#d4af37;
+margin:15px auto;
+
+}
+
+
+
+
+/* PROFILE */
+
+
+.profile{
+
+text-align:center;
+
+}
+
+
+.profile img{
+
+width:280px;
+height:280px;
+object-fit:cover;
+border-radius:20px;
+
+}
+
+
+.profile h3{
+
+font-size:30px;
+color:#002b5c;
+margin:20px;
+
+}
+
+
+
+
+/* BUSINESS */
+
+
+.cards{
+
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+gap:20px;
+
+}
+
+
+
+.card{
+
+background:white;
+width:260px;
+padding:25px;
+text-align:center;
+border-radius:15px;
+border-top:5px solid #d4af37;
+box-shadow:0 5px 15px #0002;
+
+}
+
+
+.card h3{
+
+color:#002b5c;
+
+}
+
+
+
+/* CONTACT */
+
+
+.contact{
+
+background:#002b5c;
+color:white;
+text-align:center;
+
+}
+
+
+.contact a{
+
+display:block;
+color:white;
+margin:10px;
+text-decoration:none;
+
+}
+
+
+
+
+
+@media(max-width:600px){
+
+.home h2{
+
+font-size:30px;
+
+}
+
+.logo h1{
+
+font-size:15px;
+
+}
+
+}
+
+
 </style>
+
+
 </head>
+
 
 <body>
 
+
+
 <header>
-<div class="logo"><img src="images/dps-logo.png"><h1>Dhanalakshmi Parcel Service</h1></div>
-<div class="menu-btn" onclick="openMenu()">☰</div>
+
+
+<div class="logo">
+
+<img src="images/dps-logo.png">
+
+<h1>
+Dhanalakshmi Parcel Service
+</h1>
+
+</div>
+
+
+
+<div class="menu" onclick="openMenu()">
+
+☰
+
+</div>
+
+
 </header>
 
+
+
+
+
 <div class="side-menu" id="menu">
-<h2>DPS Menu</h2>
+
+
+<h2>DPS MENU</h2>
+
+
 <a href="#home">Home</a>
+
 <a href="#profile">Profile</a>
+
 <a href="#md">Managing Director</a>
+
 <a href="#business">Business</a>
-<a href="#contact">Contact Us</a>
+
+<a href="#booking">Parcel Booking</a>
+
+<a href="#truck">Truck Load</a>
+
+<a href="#routes">Daily Routes</a>
+
+<a href="#gallery">Gallery</a>
+
+<a href="#payment">Payment</a>
+
+<a href="#contact">Contact</a>
+
+
 </div>
+
+
+
+
+
 
 <section class="home" id="home">
-<div><h2>Dhanalakshmi Parcel Service</h2><p>All India & Tamil Nadu Delivery Transport</p><p>Fast • Safe • Reliable</p></div>
+
+
+<div>
+
+
+<h2>
+Dhanalakshmi Parcel Service
+</h2>
+
+
+<p>
+All India & Tamil Nadu Delivery Transport
+</p>
+
+
+<p>
+Fast • Safe • Reliable
+</p>
+
+
+</div>
+
+
 </section>
+
+
+
+
+
 
 <section id="profile">
-<h2 class="title">Profile</h2>
-<div class="profile"><img src="images/profile-photo.jpg"><h3>Yuvakrishna</h3><p>Founder & Managing Director<br><br>Professional Transport & Logistics Service Provider</p></div>
+
+
+<h2 class="title">
+Profile
+</h2>
+
+
+<div class="profile">
+
+
+<img src="images/profile-photo.jpg">
+
+
+<h3>
+Yuvakrishna
+</h3>
+
+
+<p>
+Founder & Managing Director
+<br><br>
+Transport & Logistics Service Provider
+</p>
+
+
+</div>
+
+
 </section>
+
+
+
+
+
 
 <section id="md">
-<h2 class="title">Managing Director</h2>
-<div class="profile"><img src="images/md-photo.jpg"><h3>Managing Director</h3><p>Dhanalakshmi Parcel Service<br><br>Providing Parcel Booking, Transport Solutions, Full Truck Load, Part Truck Load Services.</p></div>
+
+
+<h2 class="title">
+Managing Director
+</h2>
+
+
+<div class="profile">
+
+
+<img src="images/md-photo.jpg">
+
+
+<h3>
+Managing Director
+</h3>
+
+
+<p>
+Dhanalakshmi Parcel Service
+<br><br>
+Parcel Booking | Logistics | Transport Solutions
+</p>
+
+
+</div>
+
+
 </section>
+
+
+
+
+
 
 <section id="business">
-<h2 class="title">Our Business</h2>
+
+
+<h2 class="title">
+Our Business
+</h2>
+
+
+
 <div class="cards">
-<div class="card"><h3>Yuva Enterprises</h3><p>Business Management</p></div>
-<div class="card"><h3>Banu Enterprises</h3><p>Business Services</p></div>
-<div class="card"><h3>Sri Dhanalakshmi Garments</h3><p>Garments Business</p></div>
-<div class="card"><h3>Dhanalakshmi Farms</h3><p>Agriculture Business</p></div>
-<div class="card"><h3>Dhanalakshmi Travels</h3><p>Travel Services</p></div>
-<div class="card"><h3>Dhanalakshmi Parcel Service</h3><p>Parcel & Logistics</p></div>
-<div class="card"><h3>4 Star Transport</h3><p>Transport Services</p></div>
+
+
+<div class="card">
+<h3>Yuva Enterprises</h3>
+<p>Business Management</p>
 </div>
-</section>
 
-<section id="booking">
-<h2 class="title">Online Parcel Booking</h2>
-<div class="card" style="max-width:700px;width:90%;margin:auto;">
-<form id="bookingForm">
-<input id="customerName" type="text" placeholder="Name" required>
-<input id="companyName" type="text" placeholder="Company Name">
-<input id="mobile" type="tel" placeholder="Mobile Number" required>
-<input id="fromPlace" type="text" placeholder="From Location" required>
-<input id="toPlace" type="text" placeholder="To Location" required>
-<select id="goods"><option>Select Goods Type</option><option>Box</option><option>Bag</option><option>Machine</option><option>Scrap</option></select>
-<input id="weight" type="text" placeholder="Weight / Ton">
-<textarea id="address" placeholder="Pickup Address"></textarea>
-<button type="button" onclick="sendWhatsApp()">Send Booking Enquiry</button>
-</form>
+
+<div class="card">
+<h3>Banu Enterprises</h3>
+<p>Business Services</p>
 </div>
-</section>
 
-<section id="daily-routes">
-<h2 class="title">Daily Delivery Routes</h2>
-<div class="cards">
-<div class="card"><h3>Erode → Dharapuram</h3><p>Daily Door Delivery</p></div>
-<div class="card"><h3>Erode → Karur</h3><p>Regular Transport</p></div>
-<div class="card"><h3>Erode → Coimbatore</h3><p>Daily Parcel Delivery</p></div>
+
+<div class="card">
+<h3>Sri Dhanalakshmi Garments</h3>
+<p>Garments Business</p>
 </div>
+
+
+<div class="card">
+<h3>Dhanalakshmi Farms</h3>
+<p>Agriculture Business</p>
+</div>
+
+
+<div class="card">
+<h3>Dhanalakshmi Travels</h3>
+<p>Travel Services</p>
+</div>
+
+
+<div class="card">
+<h3>Dhanalakshmi Parcel Service</h3>
+<p>Parcel & Logistics</p>
+</div>
+
+
+<div class="card">
+<h3>4 Star Transport</h3>
+<p>Transport Service</p>
+</div>
+
+
+</div>
+
+
 </section>
 
-<section id="contact" class="contact">
-<h2>Contact Us</h2>
-<a href="tel:8110070409">📞 8110070409</a>
-<a href="tel:8300061569">📞 8300061569</a>
-<p>Dhanalakshmi Parcel Service</p>
-</section>
 
-<footer style="background:#002b5c; color:white; padding:30px; text-align:center; border-top:5px solid #d4af37;">
-<h2>Dhanalakshmi Parcel Service</h2>
-<p>© 2026 DPS. All Rights Reserved.</p>
-</footer>
+
+
 
 <script>
-function openMenu(){ document.getElementById("menu").classList.toggle("active"); }
-document.querySelectorAll(".side-menu a").forEach(link => {
-    link.onclick = () => document.getElementById("menu").classList.remove("active");
-});
-function sendWhatsApp(){
-    let name = document.getElementById("customerName").value;
-    let msg = "Enquiry from " + name;
-    window.open("https://wa.me/918110070409?text=" + encodeURIComponent(msg));
+
+
+function openMenu(){
+
+document.getElementById("menu")
+.classList.toggle("active");
+
 }
+
+
 </script>
+
 
 </body>
 </html>
