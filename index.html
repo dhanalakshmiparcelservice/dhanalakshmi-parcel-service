@@ -1,181 +1,63 @@
 <!DOCTYPE html>
 <html lang="ta">
 <head>
-
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Dhanalakshmi Parcel Service</title>
-
-<link rel="stylesheet" href="style.css">
-
-<link rel="stylesheet"
-href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dhanalakshmi Parcel Service</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 </head>
-
 <body>
 
-<!-- Loader -->
-
-<div id="loader">
-
-<div class="loader-box">
-
-<img src="logo.png" class="loader-logo">
-
-<h2>Dhanalakshmi Parcel Service</h2>
-
-<p>FAST • SAFE • TRUSTED</p>
-
-</div>
-
-</div>
-
-<!-- Header -->
-
 <header>
-
-<div class="logo-area">
-
-<img src="logo.png" class="logo">
-
-<div>
-
-<h1>Dhanalakshmi Parcel Service</h1>
-
-<p>Professional Logistics Company</p>
-
-</div>
-
-</div>
-
-<div class="menu-btn" onclick="openMenu()">
-
-<i class="fa fa-bars"></i>
-
-</div>
-
+    <div class="logo-area">
+        <img src="logo.png" alt="Logo">
+        <h1>Dhanalakshmi Parcel Service</h1>
+    </div>
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#profile">Profile</a></li>
+            <li><a href="#booking">Booking</a></li>
+            <li><a href="#payment">Payment</a></li>
+        </ul>
+    </nav>
 </header>
 
-<!-- Side Menu -->
-
-<div id="sideMenu" class="side-menu">
-
-<div class="close-btn" onclick="closeMenu()">
-
-<i class="fa fa-times"></i>
-
-</div>
-
-<a href="#home">
-🏠 Home
-</a>
-
-<a href="#profile">
-👤 Owner Profile
-</a>
-
-<a href="#business">
-🏢 Business Details
-</a>
-
-<a href="#booking">
-📦 Parcel Booking
-</a>
-
-<a href="#routes">
-🚛 Daily Routes
-</a>
-
-<a href="#ftl">
-🚚 Full Truck Load
-</a>
-
-<a href="#ptl">
-📦 Part Truck Load
-</a>
-
-<a href="#payment">
-💳 Payment
-</a>
-
-<a href="#gallery">
-🖼 Gallery
-</a>
-
-<a href="#videos">
-🎥 Videos
-</a>
-
-<a href="#reviews">
-⭐ Reviews
-</a>
-
-<a href="#contact">
-📞 Contact
-</a>
-
-<a href="#terms">
-📜 Terms & Conditions
-</a>
-
-</div>
-
-<!-- Hero -->
-
 <section id="home" class="hero">
-
-<div class="overlay">
-
-<h1>
-
-FAST • SAFE • TRUSTED
-
-</h1>
-
-<p>
-
-Daily Parcel & Logistics Service Across Tamil Nadu
-
-</p>
-
-<div class="hero-buttons">
-
-<a href="tel:8110070409" class="call-btn">
-
-<i class="fa fa-phone"></i>
-
-Call Now
-
-</a>
-
-<a href="https://wa.me/918110070409"
-
-class="wa-btn">
-
-<i class="fab fa-whatsapp"></i>
-
-WhatsApp
-
-</a>
-
-<a href="#booking"
-
-class="book-btn">
-
-📦 Book Parcel
-
-</a>
-
-</div>
-
-</div>
-
-<div class="truck-animation">
-
-🚚──────────────────────────
-
-</div>
-
+    <h1>FAST • SAFE • TRUSTED</h1>
+    <p>Daily Logistics Service Across Tamil Nadu</p>
+    <div class="hero-buttons">
+        <a href="https://wa.me/918110070409" class="wa-btn"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+        <a href="#booking" class="book-btn">Book Now</a>
+    </div>
 </section>
+
+<section id="profile">
+    <h2>👤 Owner Profile</h2>
+    <img src="owner.jpg" alt="Pavithran" width="200">
+    <h3>Pavithran</h3>
+    <p>Managing Director</p>
+</section>
+
+<section id="booking">
+    <h2>📦 Parcel Booking</h2>
+    <form action="https://wa.me/918110070409" method="get" target="_blank">
+        <input type="text" name="text" placeholder="Customer Name" required>
+        <input type="text" name="text" placeholder="From - To" required>
+        <button type="submit">Send Enquiry to WhatsApp</button>
+    </form>
+</section>
+
+<section id="payment">
+    <h2>💳 Payment</h2>
+    <img src="qr.png" alt="QR Code" width="200">
+    <p>UPI ID: dhanalakshmi@upi</p>
+</section>
+
+<footer>
+    <p>© 2026 Dhanalakshmi Parcel Service | Designed Professionally</p>
+</footer>
+
+</body>
+</html>
