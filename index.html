@@ -6,37 +6,36 @@
     <title>தனலட்சுமி பார்சல் சர்வீஸ் | ஈரோடு</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        :root { --primary: #003366; --accent: #ff8c00; --bg: #f4f7f6; }
-        body { font-family: 'Segoe UI', sans-serif; margin: 0; background: var(--bg); color: #333; }
-        .header { background: #fff; text-align: center; padding: 20px; border-bottom: 4px solid var(--accent); }
+        body { font-family: 'Segoe UI', sans-serif; margin: 0; background: #f4f7f6; color: #333; }
+        .header { background: #fff; text-align: center; padding: 20px; border-bottom: 4px solid #ff8c00; }
         .header img { max-width: 250px; }
-        .nav { display: flex; justify-content: center; background: var(--primary); padding: 12px; position: sticky; top: 0; z-index: 1000; }
+        .nav { display: flex; justify-content: center; background: #003366; padding: 12px; position: sticky; top: 0; z-index: 1000; }
         .nav a { color: white; padding: 0 20px; text-decoration: none; font-weight: bold; }
         .container { max-width: 800px; margin: auto; padding: 20px; }
         .card { background: white; padding: 20px; margin-bottom: 20px; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
-        .img-fluid { width: 100%; border-radius: 10px; border: 2px solid var(--primary); }
-        .btn-map { background: #4285F4; color: white; padding: 15px; display: block; text-align: center; text-decoration: none; border-radius: 8px; font-weight: bold; margin-top: 10px; }
-        .search-box { width: 100%; padding: 12px; margin: 10px 0; border: 2px solid var(--primary); border-radius: 5px; box-sizing: border-box; }
+        .img-fluid { width: 100%; border-radius: 10px; border: 2px solid #003366; }
+        .btn-map { background: #4285F4; color: white; padding: 15px; display: block; text-align: center; text-decoration: none; border-radius: 8px; font-weight: bold; }
         .wa-float { position: fixed; bottom: 20px; right: 20px; background: #25D366; color: white; padding: 15px 20px; border-radius: 50px; font-size: 24px; box-shadow: 0 4px 10px rgba(0,0,0,0.3); z-index: 1000; }
-        footer { text-align: center; padding: 20px; color: #666; background: #fff; }
+        .search-box { width: 100%; padding: 12px; margin: 10px 0; border: 2px solid #003366; border-radius: 5px; }
+        footer { text-align: center; padding: 20px; color: #666; }
     </style>
 </head>
 <body>
 
 <div class="header">
-    <img src="logo_2.png" alt="Dhanalakshmi Parcel Service">
+    <img src="logo_2.png" alt="Logo">
 </div>
 
 <nav class="nav">
     <a href="#home">Home</a>
-    <a href="#profile">Profile</a>
     <a href="#search">Search</a>
+    <a href="#profile">Profile</a>
 </nav>
 
 <div class="container">
     <div id="home" class="card">
         <img src="my-photo1_2.png" alt="Owner" class="img-fluid">
-        <h2 style="color: var(--primary);">வணக்கம், நான் பவித்ரன்</h2>
+        <h2 style="color: #003366;">வணக்கம், நான் பவித்ரன்</h2>
         <p><strong>தனலட்சுமி பார்சல் சர்வீஸ் (DPS), ஈரோடு.</strong><br>
         உங்களின் பொருட்களைப் பாதுகாப்பாகவும், குறித்த நேரத்தில் இலக்குக்குக் கொண்டு சேர்ப்பதே எங்கள் நோக்கம்.</p>
     </div>
@@ -45,28 +44,24 @@
         <h2>🔍 வழித்தடங்களைத் தேடவும்</h2>
         <input type="text" id="searchInput" class="search-box" placeholder="உதாரணம்: கோவை, நாமக்கல்..." onkeyup="filterRoutes()">
         <div id="routesContainer">
-            <div class="route-item">➔ ஈரோடு - கோயம்புத்தூர்</div>
-            <div class="route-item">➔ ஈரோடு - தாராபுரம்</div>
-            <div class="route-item">➔ ஈரோடு - நாமக்கல்</div>
+            <div class="route-item" style="padding: 5px;">➔ ஈரோடு - கோயம்புத்தூர்</div>
+            <div class="route-item" style="padding: 5px;">➔ ஈரோடு - தாராபுரம்</div>
+            <div class="route-item" style="padding: 5px;">➔ ஈரோடு - நாமக்கல்</div>
         </div>
     </div>
 
     <div id="profile" class="card">
-        <img src="My profile photo _2.png" alt="Office Work" class="img-fluid">
-        <h2 style="color: var(--primary);">அலுவலக விவரங்கள்</h2>
+        <img src="office_photo.png" alt="Office Work" class="img-fluid">
+        <h2 style="color: #003366;">அலுவலக விவரங்கள்</h2>
         <p><strong>முகவரி:</strong> 19-20, நந்து பில்டிங், வி.சி.டி.வி ரோடு, ப்ளூ டைமண்ட் லாட்ஜ் எதிரில், ஈரோடு - 638 003.</p>
         <p><strong>தொடர்பு:</strong> 8110070409, 8300061569</p>
         <a href="https://goo.gl/maps/5ybefjyaCKgCmKyG9" target="_blank" class="btn-map">
-            <i class="fas fa-map-marker-alt"></i> கூகுள் மேப்பில் பார்க்க
+            <i class="fas fa-map-marker-alt"></i> லொகேஷன் பார்க்க (Google Maps)
         </a>
     </div>
 </div>
 
 <a href="https://wa.me/918110070409" class="wa-float"><i class="fab fa-whatsapp"></i></a>
-
-<footer>
-    <p>&copy; 2026 தனலட்சுமி பார்சல் சர்வீஸ் | ஈரோடு</p>
-</footer>
 
 <script>
     function filterRoutes() {
